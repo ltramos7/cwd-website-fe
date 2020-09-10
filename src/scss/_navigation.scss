@@ -1,0 +1,30 @@
+.main-nav {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    width: 89%;
+    font-family: $logo-font;
+
+    & > li {
+        list-style-type: none;
+        padding-left: 5vw;
+
+        & > a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: $secondary-color;
+        }
+    }
+}
+
+.logo {
+    font-weight: bolder;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.nav-line {
+    width: 85%;
+}
