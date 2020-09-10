@@ -4,9 +4,9 @@ class Footer extends React.Component{
     render(){
         return(
             <footer>
-                <ul>
-                    <li>
-                        <a>
+                <ul className='top-footer'>
+                    <li >
+                        <a className='footer-logo'>
                             CWD
                         </a>
                     </li>
@@ -35,24 +35,26 @@ class Footer extends React.Component{
                             Contact
                         </a>
                     </li>
-                    <li>
+                    <li className='push'>
                         <a>
-                            Twitter
+                            0
                         </a>
                     </li>
                     <li>
                         <a>
-                            Facebook
+                            0
                         </a>
                     </li>
                     <li>
                         <a>
-                            Instagram
+                            0
                         </a>
                     </li>
                 </ul>
-                <hr />
-                <ul>
+
+                <hr className='footer-line' />
+                
+                <ul className='bottom-footer'>
                     <li>
                         <a>
                             Terms & Conditions

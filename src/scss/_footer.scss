@@ -1,0 +1,40 @@
+.top-footer {
+    display: flex;
+    width: 89%;
+    font-family: $logo-font;
+
+    & > li {
+        list-style-type: none;
+        padding-left: 5vw;
+
+        & > a {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+}
+
+.footer-logo {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.bottom-footer {
+    display: flex;
+    padding-left: 16vw;
+
+    & > li {
+        list-style-type: none;
+        padding-right: 4vw;
+
+        & > a {
+            text-decoration: underline;
+            color: $secondary-color;
+            opacity: 30%;
+        }
+    }
+}
+
+.footer-line {
+    width: 85%;
+}
