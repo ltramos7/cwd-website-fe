@@ -73,6 +73,37 @@
         }
     }
 
+    &__tools_slides {
+        padding-top: 2rem;
+        display: grid;
+        grid-template: 'one two three four';
+        grid-gap: 3rem;
+
+        &-one {
+            grid-area: 'one';
+            height: 50vh;
+            width: auto;
+        }
+
+        &-two {
+            grid-area: 'two';
+            height: 50vh;
+            width: auto;
+        }
+
+        &-three {
+            grid-area: 'three';
+            height: 50vh;
+            width: auto;
+        }
+
+        &-four {
+            grid-area: 'four';
+            height: 50vh;
+            width: auto;
+        }
+    }
+
 
 
 }
