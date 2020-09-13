@@ -86,13 +86,13 @@ class About extends React.Component{
                     </div>
                 </div>
 
-                <div>
-                    <h1>Contact Us</h1>
-                    <div>
+                <div className='about__contact'>
+                    <h1 className='about__contact-us'>Contact Us</h1>
+                    <div className='about__contact-text'>
                         <p>
                             lorem this is the description la lorem i dont have it for react lorem.lorem this is the description la lorem i dont have it for react lorem
                         </p>
-                        <ul>
+                        <ul className='about__contact-list'>
                             <li>lorem ipsum dolor sit amet</li>
                             <li>lorem ipsum dolor sit amet</li>
                             <li>lorem ipsum dolor sit amet</li>

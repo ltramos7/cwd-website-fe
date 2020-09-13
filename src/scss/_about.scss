@@ -1,5 +1,5 @@
 .about {
-    padding: 2rem 5rem 3rem 5rem;
+    padding: 2rem 5rem 10rem 5rem;
     font: $paragraph-font;
 
     &__main-title {
@@ -149,4 +149,24 @@
         }
     }
 
+    &__contact {
+        display: grid;
+        grid-template: 'left left right right right';
+        grid-gap: 5rem;
+        padding-top: 4rem;
+
+        &-us {
+            grid-area: 'left';
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+        &-text {
+            grid-area: 'right';
+        }
+
+        // &-list {
+        //     font-size: 3rem;
+        // }
+    }
 }
