@@ -56,4 +56,23 @@
             opacity: 60%;
         }
     }
+
+    &__tools {
+        display: grid;
+        grid-template: 'left left right right right';
+        grid-gap: 2rem;
+
+        &-title {
+            grid-area: 'left';
+            font-size: 2rem;
+        }
+
+        &-info {
+            grid-area: 'right';
+            text-align: justify;
+        }
+    }
+
+
+
 }
