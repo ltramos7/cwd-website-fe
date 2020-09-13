@@ -61,27 +61,27 @@ class About extends React.Component{
                 </div>
 
                 <div>
-                    <h3>Services</h3>
-                    <div>
-                        <div>
-                            <h5>Strategy & Organization</h5>
-                            <p>lorem this is the description la lorem i dont have it for react lorem</p>
-                            <p>Read More</p>
+                    <h3 className='about__services-title'>Services</h3>
+                    <div className='about__services'>
+                        <div className='about__services-one'>
+                            <h5 className='about__services-name'>Strategy & Organization</h5>
+                            <p className='about__services-description'>lorem this is the description la lorem i dont have it for react lorem</p>
+                            <p className='about__services-read'>Read More</p>
                         </div>
-                        <div>
-                            <h5>Brand & Advertising</h5>
-                            <p>lorem this is the description la lorem i dont have it for react lorem</p>
-                            <p>Read More</p>
+                        <div className='about__services-two'>
+                            <h5 className='about__services-name'>Brand & Advertising</h5>
+                            <p className='about__services-description'>lorem this is the description la lorem i dont have it for react lorem</p>
+                            <p className='about__services-read'>Read More</p>
                         </div>
-                        <div>
-                            <h5>Design & Technology</h5>
-                            <p>lorem this is the description la lorem i dont have it for react lorem</p>
-                            <p>Read More</p>
+                        <div className='about__services-three'>
+                            <h5 className='about__services-name'>Design & Technology</h5>
+                            <p className='about__services-description'>lorem this is the description la lorem i dont have it for react lorem</p>
+                            <p className='about__services-read'>Read More</p>
                         </div>
-                        <div>
-                            <h5>Lotem Ipsum & Sit</h5>
-                            <p>lorem this is the description la lorem i dont have it for react lorem</p>
-                            <p>Read More</p>
+                        <div className='about__services-four'>
+                            <h5 className='about__services-name'>Lotem Ipsum & Sit</h5>
+                            <p className='about__services-description'>lorem this is the description la lorem i dont have it for react lorem</p>
+                            <p className='about__services-read'>Read More</p>
                         </div>
                     </div>
                 </div>

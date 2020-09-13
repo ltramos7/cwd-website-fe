@@ -104,6 +104,49 @@
         }
     }
 
+    &__services {
+        display: grid;
+        grid-template: 'one two three four';
+        grid-gap: 5rem;
+        text-align: justify;
 
+        &-title {
+            font-size: 2rem;
+            padding-top: 4rem;
+        }
+
+        &-one {
+            grid-area: one;
+        }
+
+        &-two {
+            grid-area: two;
+        }
+
+        &-three {
+            grid-area: three;
+        }
+
+        &-four {
+            grid-area: four;
+        }
+
+        &-name {
+            font-weight: bolder;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        &-description {
+            opacity: 60%;
+        }
+
+        &-read {
+            text-decoration: underline;
+            opacity: 80%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
 
 }
