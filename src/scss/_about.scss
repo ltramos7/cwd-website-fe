@@ -15,13 +15,45 @@
             grid-area: left;
 
             font-size: 2rem;
-
         }
 
         &-info {
             grid-area: right;
 
             text-align: justify;
+        }
+    }
+
+    &__team {
+        display: grid;
+        grid-template: 'left right';
+        grid-gap: 3rem;
+
+        &-title {
+            font-size: 2rem;
+        }
+
+        &-img {
+            height: 50vh;
+            width: auto;
+        }
+
+        &-member-name {
+            font-weight: bolder;
+            font-size: 1.2rem;
+            margin-bottom: 0rem;
+        }
+
+        &-member-job {
+            opacity: 60%;
+        }
+
+        &-member-phone {
+            opacity: 60%;
+        }
+
+        &-member-email {
+            opacity: 60%;
         }
     }
 }
