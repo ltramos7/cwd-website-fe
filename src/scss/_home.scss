@@ -1,3 +1,37 @@
 .home {
-    font-family: $logo-font;
+    font-family: $paragraph-font;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: repeat(2, 100px);
+    grid-auto-rows: 100px;
+
+}
+
+h1 {
+    font-size: 70px;
+    //need to make this a responsive unit
+}
+
+p {
+    font-size: 33px;
+    //need to make this a responsive unit
+}
+
+.intro {
+    grid-column: 2 / -1;
+    
+}
+
+.jumbotron {
+    grid-column: 1 / -1;
+    background-color: rgb(78, 77, 76);
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+
+.hello {
+    grid-column: 2 / -1;
+    grid-row-start: 8;
+    grid-row-end: 10;
 }
