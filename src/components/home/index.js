@@ -25,6 +25,9 @@ class Home extends React.Component{
 
                     <p>Check out some of our favourite projects below.</p>
                 </div>
+               
+
+                
             </div>
         )
     }
