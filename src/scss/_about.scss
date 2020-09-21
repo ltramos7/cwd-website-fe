@@ -26,8 +26,12 @@
 
     &__team {
         display: grid;
-        grid-template: 'left right';
+        grid-template: 'one two three four';
         grid-gap: 3rem;
+        
+        &-arrow {
+            cursor: pointer;
+        }
 
         &-title {
             font-size: 2rem;

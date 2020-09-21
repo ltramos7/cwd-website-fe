@@ -1,6 +1,65 @@
 import React from 'react';
 
 class About extends React.Component{
+
+    constructor(){
+        super()
+        this.state = {
+            teamBios: [
+                {
+                    name: 'Anshika Kala',
+                    title: 'Product Designer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'David Pinedo',
+                    title: 'Founder, Designer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'Linda Ramos',
+                    title: 'Co Founder, Software Engineer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'Alejandro Linan',
+                    title: 'Software Engineer, pleb',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                }
+            ]
+        }
+    }
+
+    teamBios = () => {
+        return this.state.teamBios.map(person => {
+            return(
+                <div>
+                    <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
+                    <h5 className='about__team-member-name'>{person.name}</h5>
+                    <p className='about__team-member-job'>{person.title}</p>
+                    <p className='about__team-member-phone'>{person.phone}</p>
+                    <p className='about__team-member-email'>{person.email}</p>
+                </div>
+            )
+        })
+    }
+
+    teamLeftArrow = () => {
+        console.log('LEFT CLICK TEAM')
+    }
+
+    teamRightArrow = () => {
+        console.log('RIGHT CLICK TEAM')
+    }
+
     render(){
         return(
             <section className='about'>
@@ -23,24 +82,12 @@ class About extends React.Component{
                 <div>
                     <div className='about__team'>
                         <h3 className='about__team-title'>Our Team</h3>
-                        <p>{ '<-- -->' } </p>
+                        <p className='about__team-arrow' onClick={this.teamLeftArrow}>{'<--'}</p>
+                        <p className='about__team-arrow' onClick={this.teamRightArrow}>{ '-->' }</p>
                     </div>
 
                     <div className='about__team'>
-                        <div>
-                            <img className='about__team-img' src={require(`./images/rocky-wallpaper.jpg`)} alt='placeholder' />
-                            <h5 className='about__team-member-name'>Anshika Kala</h5>
-                            <p className='about__team-member-job'>Product Designer</p>
-                            <p className='about__team-member-phone'>+1 (773) 123-1231</p>
-                            <p className='about__team-member-email'>kala.anshika@cwd.com</p>
-                        </div>
-                        <div>
-                            <img className='about__team-img' src={require(`./images/rocky-wallpaper.jpg`)} alt='placeholder' />
-                            <h5 className='about__team-member-name'>Anshika Kala</h5>
-                            <p className='about__team-member-job'>Product Designer</p>
-                            <p className='about__team-member-phone'>+1 (773) 123-1231</p>
-                            <p className='about__team-member-email'>kala.anshika@cwd.com</p>
-                        </div>
+                        { this.teamBios() }
                     </div>
                 </div>
 
