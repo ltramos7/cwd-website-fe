@@ -26,9 +26,23 @@
 
     &__team {
         display: grid;
-        grid-template: 'one two three four';
+        grid-template: 'left middle right';
         grid-gap: 3rem;
+
+        &-left {
+            grid-area: 'left';
+        }
         
+        &-middle {
+            grid-area: 'middle';
+
+            @include medium-transition;
+        }
+
+        &-right {
+            grid-area: 'right';
+        }
+
         &-arrow {
             cursor: pointer;
         }

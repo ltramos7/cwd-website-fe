@@ -3,17 +3,39 @@ import React from 'react';
 class Blog extends React.Component{
     render(){
         return(
-            // need to make the body in the main.scss to include the same website theme such as background color. 
-            <body>
-                <div className="blog-tiles-container">
-                    <img src={require('../../images/chicago-narrow.jpg')}/>
-                    <img src={require('../../images/chicago-narrow.jpg')}/>
-                    <img src={require('../../images/chicago-narrow.jpg')}/>
-                    <img src={require('../../images/chicago-narrow.jpg')}/>
+            <section className='blog-feed'>
+                <h1 className='blog-feed__main-header'>BLOG</h1>
 
+                <div className='blog-feed__container'>
+                    <div className='blog-feed__container-right'>
+                        <div className='blog-feed__card'>
+                            <img className='blog-feed__container-img' src={require(`./images/square-fill.jpg`)} alt='placeholder' />
+                            <p className='blog-feed__title'>Blog Post Title</p>
+                            <p className='blog-feed__written'>Written by David Pinedo on May 25, 2020</p>
+                        </div>
+
+                        <div className='blog-feed__card'>
+                            <img className='blog-feed__container-img' src={require(`./images/square-fill.jpg`)} alt='placeholder' />
+                            <p className='blog-feed__title'>Blog Post Title</p>
+                            <p className='blog-feed__written'>Written by David Pinedo on May 25, 2020</p>
+                        </div>
+                    </div>
+                    
+                    <div className='blog-feed__container-right'>
+                        <div className='blog-feed__card'>
+                            <img className='blog-feed__container-img' src={require(`./images/square-fill.jpg`)} alt='placeholder' />
+                            <p className='blog-feed__title'>Blog Post Title</p>
+                            <p className='blog-feed__written'>Written by David Pinedo on May 25, 2020</p>
+                        </div>
+
+                        <div className='blog-feed__card'>
+                            <img className='blog-feed__container-img' src={require(`./images/square-fill.jpg`)} alt='placeholder' />
+                            <p className='blog-feed__title'>Blog Post Title</p>
+                            <p className='blog-feed__written'>Written by David Pinedo on May 25, 2020</p>
+                        </div>
+                    </div>
                 </div>
-
-            </body>
+            </section>
         )
     }
 }
