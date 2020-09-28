@@ -39,17 +39,37 @@ class About extends React.Component{
     }
 
     teamBios = () => {
-        return this.state.teamBios.map(person => {
-            return(
+        let i = 0
+        let f = 3
+
+        let bios = []
+
+        for(i; i <= f; i++){
+            bios.push(
                 <div>
-                    <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
-                    <h5 className='about__team-member-name'>{person.name}</h5>
-                    <p className='about__team-member-job'>{person.title}</p>
-                    <p className='about__team-member-phone'>{person.phone}</p>
-                    <p className='about__team-member-email'>{person.email}</p>
+                    <img className='about__team-img' src={require(`${this.state.teamBios[i].image}`)} alt='placeholder' />
+                    <h5 className='about__team-member-name'>{this.state.teamBios[i].name}</h5>
+                    <p className='about__team-member-job'>{this.state.teamBios[i].title}</p>
+                    <p className='about__team-member-phone'>{this.state.teamBios[i].phone}</p>
+                    <p className='about__team-member-email'>{this.state.teamBios[i].email}</p>
                 </div>
             )
-        })
+        }
+
+        return bios
+
+
+        // return this.state.teamBios.map(person => {
+        //     return(
+                // <div>
+                //     <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
+                //     <h5 className='about__team-member-name'>{person.name}</h5>
+                //     <p className='about__team-member-job'>{person.title}</p>
+                //     <p className='about__team-member-phone'>{person.phone}</p>
+                //     <p className='about__team-member-email'>{person.email}</p>
+                // </div>
+        //     )
+        // })
     }
 
     teamLeftArrow = () => {
