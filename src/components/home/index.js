@@ -5,7 +5,9 @@ class Home extends React.Component{
         return(
             <section>
                 <div className='home'>
-                    <h1 className="home-title"></h1>
+                    <h1 className="home__title">Better Products, Faster.</h1>
+                    <p className="home__tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim eget tortor mi congue malesuada condimentu</p>
+                    
                 </div>
             </section>
         )

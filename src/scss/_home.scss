@@ -1,3 +1,16 @@
 .home {
-    font-family: $logo-font;
+    font-family: avenir;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    width: 89%;
+
+    &__title {
+        padding-left: 8vw;
+        font-size: 2.5rem;
+    }
+
+    &__tagline {
+        display: grid;
+    }    
 }
