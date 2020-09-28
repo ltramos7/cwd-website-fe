@@ -4,12 +4,9 @@ class Home extends React.Component{
     render(){
         return(
             <section>
-                <br />
-                <br />
-                <br />
-                <br />
-                <h1 className='home'>Home Component</h1>
-
+                <div className='home'>
+                    <h1 className="home-title"></h1>
+                </div>
             </section>
         )
     }
