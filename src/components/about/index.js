@@ -5,6 +5,7 @@ class About extends React.Component{
     constructor(){
         super()
         this.state = {
+            teamNum: 0,
             teamBios: [
                 {
                     name: 'Anshika Kala',
@@ -21,8 +22,8 @@ class About extends React.Component{
                     image: './images/rocky-wallpaper.jpg'
                 },
                 {
-                    name: 'Linda Ramos',
-                    title: 'Co Founder, Software Engineer',
+                    name: 'Val Ubaldo',
+                    title: 'Co Founder, Designer',
                     phone: '+1 (773) 123-1231',
                     email: 'kala.anshika@cwd.com',
                     image: './images/rocky-wallpaper.jpg'
@@ -38,46 +39,53 @@ class About extends React.Component{
         }
     }
 
-    teamBios = () => {
-        let i = 0
-        let f = 3
+    teamBio = () => {
+        let index = this.state.teamNum
+        let person = this.state.teamBios[index]
 
-        let bios = []
-
-        for(i; i <= f; i++){
-            bios.push(
-                <div>
-                    <img className='about__team-img' src={require(`${this.state.teamBios[i].image}`)} alt='placeholder' />
-                    <h5 className='about__team-member-name'>{this.state.teamBios[i].name}</h5>
-                    <p className='about__team-member-job'>{this.state.teamBios[i].title}</p>
-                    <p className='about__team-member-phone'>{this.state.teamBios[i].phone}</p>
-                    <p className='about__team-member-email'>{this.state.teamBios[i].email}</p>
-                </div>
-            )
-        }
-
-        return bios
-
-
-        // return this.state.teamBios.map(person => {
-        //     return(
-                // <div>
-                //     <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
-                //     <h5 className='about__team-member-name'>{person.name}</h5>
-                //     <p className='about__team-member-job'>{person.title}</p>
-                //     <p className='about__team-member-phone'>{person.phone}</p>
-                //     <p className='about__team-member-email'>{person.email}</p>
-                // </div>
-        //     )
-        // })
+        return(
+            <div className='about__team-middle'>
+                <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
+                <h5 className='about__team-member-name'>{person.name}</h5>
+                <p className='about__team-member-job'>{person.title}</p>
+                <p className='about__team-member-phone'>{person.phone}</p>
+                <p className='about__team-member-email'>{person.email}</p>
+            </div>
+        )
     }
 
     teamLeftArrow = () => {
-        console.log('LEFT CLICK TEAM')
+        if (this.state.teamNum === 0){
+            this.setState(prevState => {
+                return {
+                    ...prevState,
+                    teamNum: prevState.teamBios.length - 1
+                }
+            })
+        } else {
+            this.setState(prevState => {
+                return {
+                    ...prevState,
+                    teamNum: prevState.teamNum - 1
+                }
+            })
+        }
     }
 
     teamRightArrow = () => {
-        console.log('RIGHT CLICK TEAM')
+        if ((this.state.teamBios.length - 1) > this.state.teamNum ){
+            this.setState(prevState => {
+                return {
+                    ...prevState,
+                    teamNum: prevState.teamNum + 1
+                }
+            })
+        } else{
+            this.setState({
+                ...this.state,
+                teamNum: 0
+            })
+        }
     }
 
     render(){
@@ -102,12 +110,13 @@ class About extends React.Component{
                 <div>
                     <div className='about__team'>
                         <h3 className='about__team-title'>Our Team</h3>
-                        <p className='about__team-arrow' onClick={this.teamLeftArrow}>{'<--'}</p>
-                        <p className='about__team-arrow' onClick={this.teamRightArrow}>{ '-->' }</p>
                     </div>
 
                     <div className='about__team'>
-                        { this.teamBios() }
+                        <p className='about__team-arrow about__team-left' onClick={this.teamLeftArrow}>{'<--'}</p>
+                        { this.teamBio() }
+                        <p className='about__team-arrow about__team-right' onClick={this.teamRightArrow}>{ '-->' }</p>
+
                     </div>
                 </div>
 
