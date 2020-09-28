@@ -1,0 +1,44 @@
+.blog-feed {
+    padding: 0rem 5rem 10rem 5rem;
+    font: $paragraph-font;
+
+    &__main-header {
+        font-size: 8rem;
+        margin-top: 2rem;
+        padding-left: 5%;
+        margin-bottom: 3%;
+    }
+
+    &__card {
+        padding-bottom: 5rem;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    &__written {
+        opacity: 60%;
+    }
+
+
+    &__container {
+        display: grid;
+        grid-template: 'left right';
+        padding-left: 5%;
+
+        &-img {
+            width: 70%;
+            height: auto;
+        }
+
+        &-left {
+            grid-area: 'left';
+        }
+
+        &-right {
+            grid-area: 'right';
+        }
+    }
+}

@@ -35,6 +35,8 @@
         
         &-middle {
             grid-area: 'middle';
+
+            @include medium-transition;
         }
 
         &-right {
