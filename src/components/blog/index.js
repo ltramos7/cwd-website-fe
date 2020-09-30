@@ -1,7 +1,5 @@
 import React from 'react';
 
-// testing where this goes
-
 class Blog extends React.Component{
     render(){
         return(
