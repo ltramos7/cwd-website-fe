@@ -29,18 +29,21 @@
         grid-template: 'left middle right';
         grid-gap: 3rem;
 
-        &-left {
-            grid-area: 'left';
+        &:hover .about__team-card {
+            transform: translateX(-25%);
         }
-        
-        &-middle {
-            grid-area: 'middle';
 
+        &-card {
+            flex: 0 0 19.7%;
             @include medium-transition;
-        }
 
-        &-right {
-            grid-area: 'right';
+            &:hover ~.about__team-card {
+                transform: translateX(25%);
+            }
+
+            &:hover {
+                transform: scale(1.05) !important;
+            }
         }
 
         &-arrow {

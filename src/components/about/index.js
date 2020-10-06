@@ -7,51 +7,87 @@ class About extends React.Component{
         this.state = {
             teamNum: 0,
             teamBios: [
-                {
-                    name: 'Anshika Kala',
-                    title: 'Product Designer',
-                    phone: '+1 (773) 123-1231',
-                    email: 'kala.anshika@cwd.com',
-                    image: './images/rocky-wallpaper.jpg'
-                },
-                {
-                    name: 'David Pinedo',
-                    title: 'Founder, Designer',
-                    phone: '+1 (773) 123-1231',
-                    email: 'kala.anshika@cwd.com',
-                    image: './images/rocky-wallpaper.jpg'
-                },
-                {
-                    name: 'Val Ubaldo',
-                    title: 'Co Founder, Designer',
-                    phone: '+1 (773) 123-1231',
-                    email: 'kala.anshika@cwd.com',
-                    image: './images/rocky-wallpaper.jpg'
-                },
-                {
-                    name: 'Alejandro Linan',
-                    title: 'Software Engineer, pleb',
-                    phone: '+1 (773) 123-1231',
-                    email: 'kala.anshika@cwd.com',
-                    image: './images/rocky-wallpaper.jpg'
-                }
+                [
+                    {
+                        name: 'Person One',
+                        title: 'Product Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    },
+                    {
+                        name: 'Person Two',
+                        title: 'Founder, Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    },
+                    {
+                        name: 'Person Three',
+                        title: 'Co Founder, Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    }
+                ],
+                [
+                    {
+                        name: 'Person Four',
+                        title: 'Product Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    },
+                    {
+                        name: 'Person Five',
+                        title: 'Founder, Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    },
+                    {
+                        name: 'Person Six',
+                        title: 'Co Founder, Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    }
+                ],
+                [
+                    {
+                        name: 'Person Seven',
+                        title: 'Product Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    },
+                    {
+                        name: 'Person Eight',
+                        title: 'Founder, Designer',
+                        phone: '+1 (773) 123-1231',
+                        email: 'kala.anshika@cwd.com',
+                        image: './images/rocky-wallpaper.jpg'
+                    }
+                ]
             ]
         }
     }
 
     teamBio = () => {
         let index = this.state.teamNum
-        let person = this.state.teamBios[index]
+        let people = this.state.teamBios[index]
 
-        return(
-            <div className='about__team-middle'>
-                <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
-                <h5 className='about__team-member-name'>{person.name}</h5>
-                <p className='about__team-member-job'>{person.title}</p>
-                <p className='about__team-member-phone'>{person.phone}</p>
-                <p className='about__team-member-email'>{person.email}</p>
-            </div>
-        )
+        return people.map(person => {
+            return(
+                <div className='about__team-card'>
+                    <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
+                    <h5 className='about__team-member-name'>{person.name}</h5>
+                    <p className='about__team-member-job'>{person.title}</p>
+                    <p className='about__team-member-phone'>{person.phone}</p>
+                    <p className='about__team-member-email'>{person.email}</p>
+                </div>
+            )
+        })
     }
 
     teamLeftArrow = () => {
@@ -110,13 +146,12 @@ class About extends React.Component{
                 <div>
                     <div className='about__team'>
                         <h3 className='about__team-title'>Our Team</h3>
+                        <p className='about__team-arrow' onClick={this.teamLeftArrow}>{'<--'}</p>
+                        <p className='about__team-arrow' onClick={this.teamRightArrow}>{ '-->' }</p>
                     </div>
 
                     <div className='about__team'>
-                        <p className='about__team-arrow about__team-left' onClick={this.teamLeftArrow}>{'<--'}</p>
                         { this.teamBio() }
-                        <p className='about__team-arrow about__team-right' onClick={this.teamRightArrow}>{ '-->' }</p>
-
                     </div>
                 </div>
 
