@@ -127,7 +127,7 @@ class About extends React.Component{
     render(){
         return(
             <section className='about'>
-                <h1 className='about__main-title'>ABOUT</h1>
+                <h1 className='about__main-title slide-out'>ABOUT</h1>
 
                 <div className='about__intro'>
                     <h3 className='about__intro-title'>
