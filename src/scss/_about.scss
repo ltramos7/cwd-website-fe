@@ -193,9 +193,20 @@
 }
 
 .slide-out {
-    &:hover {
+    // &:hover {
         transform: translateX(-100%);
 
         @include slow-transition
-    }?
+    // }
+}
+
+.slide-in {
+    transform: translateX(0%);
+
+    @include slow-transition
+}
+
+.team-hidden {
+    // transform: translateX(-100%);
+    opacity: 0%;
 }
