@@ -29,18 +29,21 @@
         grid-template: 'left middle right';
         grid-gap: 3rem;
 
-        &-left {
-            grid-area: 'left';
-        }
-        
-        &-middle {
-            grid-area: 'middle';
-
-            @include medium-transition;
+        &:hover .about__team-card {
+            transform: translateX(-5%);
         }
 
-        &-right {
-            grid-area: 'right';
+        &-card {
+            // flex: 0 0 19.7%;
+            @include slow-transition;
+
+            &:hover ~.about__team-card {
+                transform: translateX(25%);
+            }
+
+            &:hover {
+                transform: scale(1.05) !important;
+            }
         }
 
         &-arrow {
@@ -187,4 +190,23 @@
         //     font-size: 3rem;
         // }
     }
+}
+
+.slide-out {
+    // &:hover {
+        transform: translateX(-100%);
+
+        @include slow-transition
+    // }
+}
+
+.slide-in {
+    transform: translateX(0%);
+
+    @include slow-transition
+}
+
+.team-hidden {
+    // transform: translateX(-100%);
+    opacity: 0%;
 }

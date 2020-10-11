@@ -8,29 +8,57 @@ class About extends React.Component{
             teamNum: 0,
             teamBios: [
                 {
-                    name: 'Anshika Kala',
+                    name: 'Person One',
                     title: 'Product Designer',
                     phone: '+1 (773) 123-1231',
                     email: 'kala.anshika@cwd.com',
                     image: './images/rocky-wallpaper.jpg'
                 },
                 {
-                    name: 'David Pinedo',
+                    name: 'Person Two',
                     title: 'Founder, Designer',
                     phone: '+1 (773) 123-1231',
                     email: 'kala.anshika@cwd.com',
                     image: './images/rocky-wallpaper.jpg'
                 },
                 {
-                    name: 'Val Ubaldo',
+                    name: 'Person Three',
                     title: 'Co Founder, Designer',
                     phone: '+1 (773) 123-1231',
                     email: 'kala.anshika@cwd.com',
                     image: './images/rocky-wallpaper.jpg'
                 },
                 {
-                    name: 'Alejandro Linan',
-                    title: 'Software Engineer, pleb',
+                    name: 'Person Four',
+                    title: 'Product Designer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'Person Five',
+                    title: 'Founder, Designer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'Person Six',
+                    title: 'Co Founder, Designer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'Person Seven',
+                    title: 'Product Designer',
+                    phone: '+1 (773) 123-1231',
+                    email: 'kala.anshika@cwd.com',
+                    image: './images/rocky-wallpaper.jpg'
+                },
+                {
+                    name: 'Person Eight',
+                    title: 'Founder, Designer',
                     phone: '+1 (773) 123-1231',
                     email: 'kala.anshika@cwd.com',
                     image: './images/rocky-wallpaper.jpg'
@@ -41,17 +69,38 @@ class About extends React.Component{
 
     teamBio = () => {
         let index = this.state.teamNum
-        let person = this.state.teamBios[index]
+        let num = this.state.teamBios.length
+        let list = []
 
-        return(
-            <div className='about__team-middle'>
-                <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
-                <h5 className='about__team-member-name'>{person.name}</h5>
-                <p className='about__team-member-job'>{person.title}</p>
-                <p className='about__team-member-phone'>{person.phone}</p>
-                <p className='about__team-member-email'>{person.email}</p>
-            </div>
-        )
+        for (let i = 0; i < num; i++){
+            if((index === i) || (index + 1 === i) || index + 2 === i){
+                const person = this.state.teamBios[i]
+
+                list.push(
+                    <div className='about__team-card'>
+                        <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
+                        <h5 className='about__team-member-name'>{person.name}</h5>
+                        <p className='about__team-member-job'>{person.title}</p>
+                        <p className='about__team-member-phone'>{person.phone}</p>
+                        <p className='about__team-member-email'>{person.email}</p>
+                    </div>
+                )
+            } else{
+                const person = this.state.teamBios[i]
+
+                list.push(
+                    <div className='team-hidden'>
+                        <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
+                        <h5 className='about__team-member-name'>{person.name}</h5>
+                        <p className='about__team-member-job'>{person.title}</p>
+                        <p className='about__team-member-phone'>{person.phone}</p>
+                        <p className='about__team-member-email'>{person.email}</p>
+                    </div>
+                )
+            }
+        }
+
+        return list
     }
 
     teamLeftArrow = () => {
@@ -88,6 +137,12 @@ class About extends React.Component{
         }
     }
 
+    slideTeamOut = () => {
+        let teamCard = document.querySelector('#team-card')
+
+        teamCard.classList.add('slide-out')
+    }
+
     render(){
         return(
             <section className='about'>
@@ -110,13 +165,12 @@ class About extends React.Component{
                 <div>
                     <div className='about__team'>
                         <h3 className='about__team-title'>Our Team</h3>
+                        <p className='about__team-arrow' onClick={this.teamRightArrow}>{'<--'}</p>
+                        <p className='about__team-arrow' onClick={this.teamRightArrow}>{ '-->' }</p>
                     </div>
 
-                    <div className='about__team'>
-                        <p className='about__team-arrow about__team-left' onClick={this.teamLeftArrow}>{'<--'}</p>
+                    <div id='team-card' className='about__team'>
                         { this.teamBio() }
-                        <p className='about__team-arrow about__team-right' onClick={this.teamRightArrow}>{ '-->' }</p>
-
                     </div>
                 </div>
 
