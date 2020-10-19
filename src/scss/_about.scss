@@ -25,29 +25,16 @@
     }
 
     &__team {
-        display: grid;
-        grid-template: 'left middle right';
-        grid-gap: 3rem;
-
-        &:hover .about__team-card {
-            transform: translateX(-5%);
-        }
+        display: flex;
 
         &-card {
-            // flex: 0 0 19.7%;
-            @include slow-transition;
+            padding-left: 40%;
 
-            &:hover ~.about__team-card {
-                transform: translateX(25%);
-            }
-
-            &:hover {
-                transform: scale(1.05) !important;
-            }
         }
 
         &-arrow {
             cursor: pointer;
+            padding-left: 25%;
         }
 
         &-title {
@@ -190,23 +177,4 @@
         //     font-size: 3rem;
         // }
     }
-}
-
-.slide-out {
-    // &:hover {
-        transform: translateX(-100%);
-
-        @include slow-transition
-    // }
-}
-
-.slide-in {
-    transform: translateX(0%);
-
-    @include slow-transition
-}
-
-.team-hidden {
-    // transform: translateX(-100%);
-    opacity: 0%;
 }
