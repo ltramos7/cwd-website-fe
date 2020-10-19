@@ -72,24 +72,10 @@ class About extends React.Component{
         let num = this.state.teamBios.length
         let list = []
 
-        for (let i = 0; i < num; i++){
-            if((index === i) || (index + 1 === i) || index + 2 === i){
-                const person = this.state.teamBios[i]
-
+        this.state.teamBios.forEach((person, ind) => {
+            if(index === ind ){
                 list.push(
-                    <div className='about__team-card'>
-                        <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
-                        <h5 className='about__team-member-name'>{person.name}</h5>
-                        <p className='about__team-member-job'>{person.title}</p>
-                        <p className='about__team-member-phone'>{person.phone}</p>
-                        <p className='about__team-member-email'>{person.email}</p>
-                    </div>
-                )
-            } else{
-                const person = this.state.teamBios[i]
-
-                list.push(
-                    <div className='team-hidden'>
+                    <div className='about__team-card fade'>
                         <img className='about__team-img' src={require(`${person.image}`)} alt='placeholder' />
                         <h5 className='about__team-member-name'>{person.name}</h5>
                         <p className='about__team-member-job'>{person.title}</p>
@@ -98,7 +84,7 @@ class About extends React.Component{
                     </div>
                 )
             }
-        }
+        });
 
         return list
     }
@@ -137,11 +123,6 @@ class About extends React.Component{
         }
     }
 
-    slideTeamOut = () => {
-        let teamCard = document.querySelector('#team-card')
-
-        teamCard.classList.add('slide-out')
-    }
 
     render(){
         return(
@@ -165,11 +146,11 @@ class About extends React.Component{
                 <div>
                     <div className='about__team'>
                         <h3 className='about__team-title'>Our Team</h3>
-                        <p className='about__team-arrow' onClick={this.teamRightArrow}>{'<--'}</p>
+                        <p className='about__team-arrow' onClick={this.teamLeftArrow}>{'<--'}</p>
                         <p className='about__team-arrow' onClick={this.teamRightArrow}>{ '-->' }</p>
                     </div>
 
-                    <div id='team-card' className='about__team'>
+                    <div className='about__team'>
                         { this.teamBio() }
                     </div>
                 </div>
