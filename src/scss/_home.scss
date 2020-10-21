@@ -1,3 +1,26 @@
 .home {
-    font-family: $logo-font;
+    font-family: $paragraph-font;
+
+    &__title {
+        font-size: 2.5rem;
+        padding: 0rem 7rem 0rem 7rem;
+    }
+
+    &__tagline {
+        padding: 0rem 7rem 0rem 7rem;
+    }
+
+    &__wide-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__intro-title {
+        padding: 0rem 7rem 0rem 7rem;
+    }
+
+    &__intro-body {
+        padding: 0rem 7rem 7rem 7rem;
+    }
+    
 }
