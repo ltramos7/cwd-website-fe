@@ -1,0 +1,54 @@
+.work {
+    padding-bottom: 20rem;
+
+    &__heading {
+        background-color: $third-color;
+        display: flex;
+        justify-content: center;
+        padding: 4rem;
+        
+        &-text {
+            color: $white-color;
+            padding-right: 10rem;
+
+            & > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &-img {
+            height: 25vh;
+            width: auto;
+        }
+    }
+
+    &__design-topics {
+        display: flex;
+        justify-content: center;
+
+        & > li {
+            list-style-type: none;
+            padding: 5rem 15rem 0 0;
+
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__cards-display{}
+    
+}
+
+.card-div {
+    border: 0.5rem solid red;
+}
+
+.cards-div {
+    display: grid;
+    grid-template: 'left right';
+}
+
+.sample-img {
+    height: 10vh;
+    width: auto;
+}
