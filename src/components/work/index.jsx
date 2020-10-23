@@ -42,8 +42,8 @@ class Work extends React.Component{
     showcaseCards = () => {
         return this.state.showcases.map(card => {
             return(
-                <div className='card-div'>
-                    <img className='sample-img' src={require(`./images/minimal-placeholder.jpg`)} alt='showcase-placeholder' />
+                <div className='work__cards-display-card'>
+                    <img src={require(`./images/minimal-placeholder.jpg`)} alt='showcase-placeholder' />
                     <p>{ this.filterTags(card.tags) }</p>
                     <h1>{ card.title }</h1>
                 </div>
@@ -89,7 +89,7 @@ class Work extends React.Component{
                     </ul>
                 </div>
 
-                <div className='cards-div'>
+                <div className='work__cards-display'>
                     { this.showcaseCards() }
                 </div>
 
