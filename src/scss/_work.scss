@@ -35,20 +35,19 @@
         }
     }
 
-    &__cards-display{}
+    &__cards-display{
+        display: grid;
+        grid-template: 'left right';
+
+        &-card {
+            border: 0.5rem solid red;
+
+            & > img {
+                height: 10vh;
+                width: auto;
+            }
+        }
+
+    }
     
-}
-
-.card-div {
-    border: 0.5rem solid red;
-}
-
-.cards-div {
-    display: grid;
-    grid-template: 'left right';
-}
-
-.sample-img {
-    height: 10vh;
-    width: auto;
 }
