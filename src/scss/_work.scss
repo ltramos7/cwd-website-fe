@@ -38,13 +38,29 @@
     &__cards-display{
         display: grid;
         grid-template: 'left right';
+        grid-gap: 8rem;
+        padding-top: 3rem;
+        justify-content: center;
 
         &-card {
-            border: 0.5rem solid red;
+            border-radius: 1%;
+            box-shadow: 2px 2px 5px 5px $primary-color-shadow;
 
             & > img {
-                height: 10vh;
+                height: 45vh;
                 width: auto;
+                border-radius: 1% 1% 0% 0%;
+            }
+
+            & > p {
+                opacity: 70%;
+                padding-top: 2rem;
+                padding-left: 2rem;
+            }
+
+            & > h1 {
+                padding-bottom: 2rem;
+                padding-left: 2rem;
             }
         }
 
