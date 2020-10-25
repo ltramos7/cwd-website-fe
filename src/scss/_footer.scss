@@ -1,40 +1,40 @@
-.top-footer {
-    display: flex;
-    width: 89%;
-    font-family: $logo-font;
+.footer {
+    background-color: $black-color;
 
-    & > li {
-        list-style-type: none;
-        padding-left: 5vw;
+    &__head {
+        display: flex;
 
-        & > a {
-            text-decoration: none;
-            color: $secondary-color;
+        &-text {
+            color: $white-color;
+        }
+
+        &-img {
+            & > img {
+                height: 10vh;
+                width: auto;
+            }    
         }
     }
-}
 
-.footer-logo {
-    font-size: 1.3rem;
-    font-weight: bolder;
-}
+    &__sub {
+        display: flex;
+        
+        &-text {
+            & > p {
+                color: $white-color;
+            }
+        }
 
-.bottom-footer {
-    display: flex;
-    padding-left: 16vw;
+        &-project {
+            &-list {
+                color: $white-color;
+            }
+        }
 
-    & > li {
-        list-style-type: none;
-        padding-right: 4vw;
-
-        & > a {
-            text-decoration: underline;
-            color: $secondary-color;
-            opacity: 30%;
+        &-site-map {
+            &-list {
+                color: $white-color;
+            }
         }
     }
-}
-
-.footer-line {
-    width: 85%;
 }

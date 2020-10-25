@@ -11,7 +11,6 @@ import Home from './components/home/index'
 import Navigation from './components/global/navigation/index'
 import Work from './components/work/index'
 
-import Test from './components/test';
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
         <Route exact path='/' component={Home}/>
         <Route exact path='/work' component={Work}/>
 
-        <Route exact path='/test' component={Test} />
       </BrowserRouter>
       <Footer/>
     </body>
