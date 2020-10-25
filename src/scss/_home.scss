@@ -1,26 +1,26 @@
 .home {
-    font-family: avenir;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    width: 89%;
-    // display: grid;
+    font-family: $paragraph-font;
 
     &__title {
-        padding-left: 8vw;
         font-size: 2.5rem;
-        // grid-area: top;
-        grid-gap: 2rem;
+        padding: 0rem 7rem 0rem 7rem;
     }
 
     &__tagline {
-        // grid-area: bottom;
-        font-size: medium;
-    }  
-    
-    &__wide-image {
-        width: auto;
+        padding: 0rem 7rem 0rem 7rem;
     }
 
+    &__wide-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__intro-title {
+        padding: 0rem 7rem 0rem 7rem;
+    }
+
+    &__intro-body {
+        padding: 0rem 7rem 7rem 7rem;
+    }
     
 }
