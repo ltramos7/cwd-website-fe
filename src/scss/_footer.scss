@@ -15,4 +15,26 @@
             }    
         }
     }
+
+    &__sub {
+        display: flex;
+        
+        &-text {
+            & > p {
+                color: $white-color;
+            }
+        }
+
+        &-project {
+            &-list {
+                color: $white-color;
+            }
+        }
+
+        &-site-map {
+            &-list {
+                color: $white-color;
+            }
+        }
+    }
 }
