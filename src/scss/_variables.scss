@@ -1,10 +1,11 @@
 $paragraph-font: 'Avenir';
 $logo-font: 'Playfair Display SC';
 
-$primary-color: #e5e5e5;
-$primary-color-shadow: #adadad;
-$secondary-color: black;
-$third-color: #333333;
+$first-color: #e5e5e5;
+$first-color-shadow: #adadad;
+$second-color: #333333;
+
+$black-color: black;
 $white-color: white;
 
 @mixin slow-transition {
