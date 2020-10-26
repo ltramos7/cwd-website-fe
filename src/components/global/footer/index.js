@@ -7,7 +7,7 @@ class Footer extends React.Component{
                 <div className='footer__head'>
                     <div className='footer__head-text'>
                         <h1>Have a Project Need?</h1>
-                        <button>Let's work together -></button>
+                        <button className='footer__head-button'>Let's work together -></button>
                     </div>
                     <div className='footer__head-img'>
                         <img src={require(`./images/minimal-placeholder.jpg`)} alt='placeholder-image' />
