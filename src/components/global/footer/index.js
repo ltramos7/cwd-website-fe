@@ -16,14 +16,14 @@ class Footer extends React.Component{
 
                 <div className='footer__sub'>
                     <div className='footer__sub-text'>
-                        <p>LOGO</p>
-                        <p>City of Wind is a design studio that specializes in UX Design and Software Development for startups</p>
-                        <p>&copy; City of Wind Design 2020</p>
+                        <p className='footer__sub-text-logo'>LOGO</p>
+                        <p className='footer__sub-text-description'>City of Wind is a design studio that specializes in UX Design and Software Development for startups</p>
+                        <p className='footer__sub-text-copyright'>&copy; City of Wind Design 2020</p>
                     </div>
 
                     <div className='footer__sub-project'>
                         <ul className='footer__sub-project-list'>
-                            <p>Have a project for us?</p>
+                            <p className='footer__sub-project-list-title'>Have a project for us?</p>
                             <li>User Research</li>
                             <li>Prototype a concept</li>
                             <li>Ideate & Test a new product</li>
@@ -33,7 +33,7 @@ class Footer extends React.Component{
 
                     <div className='footer__sub-site-map'>
                         <ul className='footer__sub-site-map-list'>
-                            <p>Site Map</p>
+                            <p className='footer__sub-site-map-list-title'>Site Map</p>
                             <li>About</li>
                             <li>Works</li>
                             <li>Blog</li>
