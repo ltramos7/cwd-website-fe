@@ -1,10 +1,11 @@
 import React from 'react'
-import { Dodo } from '../blog-data/index'
+import { BlogData } from '../blog-data/index'
 
 class BlogDetail extends React.Component {
 
     componentDidMount(){
-        console.log(Dodo)
+        console.log(BlogData)
+        console.log(this.props.history.location.pathname)
     }
 
     render(){
