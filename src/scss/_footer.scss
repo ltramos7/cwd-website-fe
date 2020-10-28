@@ -9,7 +9,7 @@
 
         &-text {
             color: $white-color;
-            padding-right: 20rem;
+            padding-right: 40rem;
 
             & > h1 {
                 font-size: 3rem;
@@ -38,22 +38,64 @@
 
     &__sub {
         display: flex;
-        
+        padding-bottom: 5rem;
+
         &-text {
-            & > p {
+            width: 30%;
+            padding-left: 17rem;
+
+            &-logo {
                 color: $white-color;
+                font-size: 2rem;
+            }
+
+            &-description {
+                color: $white-color;
+                font-size: 1.1rem;
+            }
+
+            &-copyright {
+                color: $white-color;
+                font-size: 1.1rem;
+                padding-top: 4rem;
             }
         }
 
         &-project {
+            padding-left: 4rem;
+
             &-list {
                 color: $white-color;
-            }
+
+                &-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+                
+                & > li {
+                    list-style-type: none;
+                    font-size: 1.1rem;
+                    padding-top: 1rem;
+                }
+            }         
         }
 
         &-site-map {
+            padding-left: 12rem;
+
             &-list {
                 color: $white-color;
+
+                &-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+
+                & > li {
+                    list-style-type: none;
+                    font-size: 1.1rem;
+                    padding-top: 1rem;
+                }
             }
         }
     }

@@ -4,7 +4,10 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import './scss/main.scss'
 
 import About from './components/about/index'
+
 import Blog from './components/blog/index'
+import BlogDetail from './components/blog/blog-detail/index'
+
 import Contact from './components/contact/index'
 import Footer from './components/global/footer/index'
 import Home from './components/home/index'
@@ -17,11 +20,13 @@ function App() {
     <body>
       <Navigation/>
       <BrowserRouter>
-        <Route exact path='/about' component={About}/>
-        <Route exact path='/blog' component={Blog}/>
-        <Route exact path='/contact' component={Contact}/>
         <Route exact path='/' component={Home}/>
+        <Route exact path='/about' component={About}/>
         <Route exact path='/work' component={Work}/>
+        <Route exact path='/contact' component={Contact}/>
+
+        <Route exact path='/blog' component={Blog}/>
+        <Route exact path='/blog/:id' component={BlogDetail} />
 
       </BrowserRouter>
       <Footer/>
