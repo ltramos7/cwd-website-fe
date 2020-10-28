@@ -7,7 +7,7 @@
     }
 
     &__tagline {
-        padding: 0rem 7rem 0rem 7rem;
+        padding: 0rem 7rem 5rem 7rem;
     }
 
     &__wide-image {
@@ -16,11 +16,15 @@
     }
 
     &__intro-title {
-        padding: 0rem 7rem 0rem 7rem;
+        padding: 5rem 7rem 0rem 7rem;
     }
 
     &__intro-body {
         padding: 0rem 7rem 7rem 7rem;
+    }
+
+    &__intro-button {
+        justify-content: center;
     }
     
 }

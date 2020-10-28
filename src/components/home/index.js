@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button.jsx';
 import Intro from './Intro.jsx';
 
 class Home extends React.Component{
@@ -14,6 +15,9 @@ class Home extends React.Component{
                 </div>
                 <div>
                     <Intro/>
+                </div>
+                <div>
+                    <Button/>
                 </div>
             </section>
         )
