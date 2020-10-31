@@ -6,13 +6,22 @@ class BlogDetail extends React.Component {
         super()
         this.state = {
             set: false,
-            card: []
+            card: null
         }
     }
 
+    setBlogDetailState = (id) => {
+        let retrievedBlog = BlogData.find(blog => blog.id == id)
+
+        this.setState({
+            ...this.state,
+            set: true,
+            card: retrievedBlog
+        })
+    }
+
     componentDidMount(){
-        console.log(BlogData)
-        console.log(this.props.history.location.pathname)
+        this.setBlogDetailState(this.props.history.location.pathname.split('/')[2])
     }
 
     render(){
