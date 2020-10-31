@@ -1,0 +1,12 @@
+.blog-detail {
+    
+    &__head {
+        background-color: $second-color;
+        padding: 1rem 5rem 4rem 5rem;
+
+        &-title {
+            color: $white-color;
+            font-size: 3rem;
+        }
+    }
+}

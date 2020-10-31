@@ -20,16 +20,29 @@ class BlogDetail extends React.Component {
         })
     }
 
+    returnHeadCard = () => {
+        const blog = this.state.card
+        return(
+            <div className='blog-detail__head'>
+                <h1 className='blog-detail__head-title'>{ blog.title }</h1>
+                <div className='blog-detail__head-btns'>
+                    <button>category 1</button>
+                    <button>category 2</button>
+                    <button>category 3</button>
+                </div>
+            </div>
+        )
+    }
+
     componentDidMount(){
         this.setBlogDetailState(this.props.history.location.pathname.split('/')[2])
     }
 
     render(){
         return(
-            <section>
-                BLOG DETAIL
+            <section className='blog-detail'>
 
-                { this.state.set ? <p>SET</p> : <p>Loading...</p>}
+                { this.state.set ? this.returnHeadCard() : <p>Loading...</p>}
 
             </section>
         )
