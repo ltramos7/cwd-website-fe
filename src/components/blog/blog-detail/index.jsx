@@ -22,13 +22,20 @@ class BlogDetail extends React.Component {
 
     returnHeadCard = () => {
         const blog = this.state.card
+
+        function getCategories(categories){
+            return categories.map(category => {
+                return(
+                    <button className='blog-detail__head-btn'>{ category }</button>
+                )
+            })
+        }
+
         return(
             <div className='blog-detail__head'>
                 <h1 className='blog-detail__head-title'>{ blog.title }</h1>
                 <div className='blog-detail__head-btns'>
-                    <button className='blog-detail__head-btn'>category 1</button>
-                    <button className='blog-detail__head-btn'>category 2</button>
-                    <button className='blog-detail__head-btn'>category 3</button>
+                    { getCategories(blog.categories) }
                 </div>
             </div>
         )
