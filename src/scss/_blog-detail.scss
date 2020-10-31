@@ -1,0 +1,26 @@
+.blog-detail {
+    
+    &__head {
+        background-color: $second-color;
+        padding: 1rem 5rem 4rem 5rem;
+
+        &-title {
+            color: $white-color;
+            font-size: 3rem;
+        }
+
+        // &-btns {
+        // }
+
+        &-btn {
+            margin-right: 2rem;
+            height: 2rem;
+            padding: 0 1rem 0 1rem;
+            // width: 10rem;
+            border-radius: 1rem;
+            background-color: $third-color;
+            color: $white-color;
+            font-size: 1rem;
+        }
+    }
+}
