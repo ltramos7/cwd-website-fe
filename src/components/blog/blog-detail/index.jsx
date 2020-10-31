@@ -26,9 +26,9 @@ class BlogDetail extends React.Component {
             <div className='blog-detail__head'>
                 <h1 className='blog-detail__head-title'>{ blog.title }</h1>
                 <div className='blog-detail__head-btns'>
-                    <button>category 1</button>
-                    <button>category 2</button>
-                    <button>category 3</button>
+                    <button className='blog-detail__head-btn'>category 1</button>
+                    <button className='blog-detail__head-btn'>category 2</button>
+                    <button className='blog-detail__head-btn'>category 3</button>
                 </div>
             </div>
         )
