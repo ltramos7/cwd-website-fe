@@ -41,10 +41,40 @@
             & > p {
                 font-size: 1.1rem;
             }
+
+            & > a {
+                font-size: 1.1rem;
+                text-decoration: none;
+                color: $black-color;
+            }
         }
 
         &-center {
             padding: 2rem 0 0 10rem;
+        }
+    }
+
+    &__images {
+        display: flex;
+        padding: 0 10rem 0 10rem ;
+        
+        &-img {
+            height: auto;
+            width: 25vw;
+            padding: 1rem;
+        }
+    }
+
+    &__last-content {
+        display: grid;
+        grid-template-columns: 30rem auto;
+        padding: 2rem 10rem 0 10rem;
+    }
+
+    &__last-image {
+        & > img {
+            width: 100%;
+            height: auto;
         }
     }
 }

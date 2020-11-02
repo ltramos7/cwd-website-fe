@@ -62,7 +62,7 @@ class BlogDetail extends React.Component {
                     <h1>Team</h1>
                     <p>{ updatedTeam }</p>
                     <h1>Website</h1>
-                    <p> { website }</p>
+                    <a href={website} target='_blank'> { website }</a>
                 </div>
             )
         }
@@ -73,6 +73,8 @@ class BlogDetail extends React.Component {
                     <p>{ content }</p>
                 )
             })
+
+            updatedContent.pop()
 
             return(
                 <div className='blog-detail__main-content-center'>
@@ -90,6 +92,43 @@ class BlogDetail extends React.Component {
         )
     }
 
+    returnImages = () => {
+        const blog = this.state.card
+        let updatedImages = blog.images.map(img => {
+            return(
+                <img className='blog-detail__images-img' src={require(`../blog-data/blog-images/${img}`)} placeholder='images' />
+            )
+        })
+        
+        return(
+            <div className='blog-detail__images'>
+                { updatedImages }
+            </div>
+        )
+    }
+
+    returnLastContent = () => {
+        const blog = this.state.card
+        const blogLastInd = blog.content.length - 1
+
+        return (
+            <div className='blog-detail__last-content'>
+                <p></p>
+                <p>{ blog.content[blogLastInd] }</p>
+            </div>
+        )
+    }
+
+    returnLastImage = () => {
+        const blog = this.state.card
+
+        return(
+            <div className='blog-detail__last-image'>
+                <img src={require(`../blog-data/blog-images/${blog.closingImage}`)} placeholder='closing-image' />
+            </div>
+        )
+    }
+
     componentDidMount(){
         this.setBlogDetailState(this.props.history.location.pathname.split('/')[2])
     }
@@ -103,6 +142,12 @@ class BlogDetail extends React.Component {
                 { this.state.set ? this.returnHeadImg() : null }
 
                 { this.state.set ? this.returnMainContent() : null }
+
+                { this.state.set ? this.returnImages() : null }
+
+                { this.state.set ? this.returnLastContent() : null }
+
+                { this.state.set ? this.returnLastImage() : null }
 
             </section>
         )
