@@ -23,4 +23,12 @@
             font-size: 1rem;
         }
     }
+
+    &__main-image {
+
+        & > img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
