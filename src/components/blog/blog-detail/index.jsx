@@ -68,9 +68,15 @@ class BlogDetail extends React.Component {
         }
 
         function getMainContent(contentList){
+            let updatedContent = contentList.map(content => {
+                return(
+                    <p>{ content }</p>
+                )
+            })
+
             return(
                 <div className='blog-detail__main-content-center'>
-                    Content 1, content 2, content 3
+                    { updatedContent }
                 </div>
             )
         }

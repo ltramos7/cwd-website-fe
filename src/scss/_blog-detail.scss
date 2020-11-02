@@ -9,14 +9,10 @@
             font-size: 3rem;
         }
 
-        // &-btns {
-        // }
-
         &-btn {
             margin-right: 2rem;
             height: 2rem;
             padding: 0 1rem 0 1rem;
-            // width: 10rem;
             border-radius: 1rem;
             background-color: $third-color;
             color: $white-color;
@@ -48,7 +44,7 @@
         }
 
         &-center {
-            padding-left: 10rem;
+            padding: 2rem 0 0 10rem;
         }
     }
 }
