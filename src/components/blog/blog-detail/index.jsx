@@ -55,9 +55,14 @@ class BlogDetail extends React.Component {
         const blog = this.state.card
 
         function getSideBarInfo(team, website){
+            let updatedTeam = team.join(', ')
+
             return(
                 <div className='blog-detail__main-content-side'>
-                    Team, Website
+                    <h1>Team</h1>
+                    <p>{ updatedTeam }</p>
+                    <h1>Website</h1>
+                    <p> { website }</p>
                 </div>
             )
         }
