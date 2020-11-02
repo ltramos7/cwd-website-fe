@@ -62,15 +62,23 @@ class BlogDetail extends React.Component {
                     <h1>Team</h1>
                     <p>{ updatedTeam }</p>
                     <h1>Website</h1>
-                    <p> { website }</p>
+                    <a href={website} target='_blank'> { website }</a>
                 </div>
             )
         }
 
         function getMainContent(contentList){
+            let updatedContent = contentList.map(content => {
+                return(
+                    <p>{ content }</p>
+                )
+            })
+
+            updatedContent.pop()
+
             return(
                 <div className='blog-detail__main-content-center'>
-                    Content 1, content 2, content 3
+                    { updatedContent }
                 </div>
             )
         }
@@ -80,6 +88,43 @@ class BlogDetail extends React.Component {
                 { getSideBarInfo(blog.teamMembers, blog.website) }
 
                 { getMainContent(blog.content) }
+            </div>
+        )
+    }
+
+    returnImages = () => {
+        const blog = this.state.card
+        let updatedImages = blog.images.map(img => {
+            return(
+                <img className='blog-detail__images-img' src={require(`../blog-data/blog-images/${img}`)} placeholder='images' />
+            )
+        })
+        
+        return(
+            <div className='blog-detail__images'>
+                { updatedImages }
+            </div>
+        )
+    }
+
+    returnLastContent = () => {
+        const blog = this.state.card
+        const blogLastInd = blog.content.length - 1
+
+        return (
+            <div className='blog-detail__last-content'>
+                <p></p>
+                <p>{ blog.content[blogLastInd] }</p>
+            </div>
+        )
+    }
+
+    returnLastImage = () => {
+        const blog = this.state.card
+
+        return(
+            <div className='blog-detail__last-image'>
+                <img src={require(`../blog-data/blog-images/${blog.closingImage}`)} placeholder='closing-image' />
             </div>
         )
     }
@@ -97,6 +142,12 @@ class BlogDetail extends React.Component {
                 { this.state.set ? this.returnHeadImg() : null }
 
                 { this.state.set ? this.returnMainContent() : null }
+
+                { this.state.set ? this.returnImages() : null }
+
+                { this.state.set ? this.returnLastContent() : null }
+
+                { this.state.set ? this.returnLastImage() : null }
 
             </section>
         )
