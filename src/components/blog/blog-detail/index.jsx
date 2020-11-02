@@ -41,6 +41,44 @@ class BlogDetail extends React.Component {
         )
     }
 
+    returnHeadImg = () => {
+        const blog = this.state.card
+        
+        return(
+            <div className='blog-detail__main-image'>
+                <img src={require(`../blog-data/blog-images/${blog.mainImage}`)} placeholder='head image' />
+            </div>
+        )
+    }
+
+    returnMainContent = () => {
+        const blog = this.state.card
+
+        function getSideBarInfo(team, website){
+            return(
+                <div className='blog-detail__main-content-side'>
+                    Team, Website
+                </div>
+            )
+        }
+
+        function getMainContent(contentList){
+            return(
+                <div className='blog-detail__main-content-center'>
+                    Content 1, content 2, content 3
+                </div>
+            )
+        }
+
+        return(
+            <div className='blog-detail__main-content'>
+                { getSideBarInfo(blog.teamMembers, blog.website) }
+
+                { getMainContent(blog.content) }
+            </div>
+        )
+    }
+
     componentDidMount(){
         this.setBlogDetailState(this.props.history.location.pathname.split('/')[2])
     }
@@ -50,6 +88,10 @@ class BlogDetail extends React.Component {
             <section className='blog-detail'>
 
                 { this.state.set ? this.returnHeadCard() : <p>Loading...</p>}
+
+                { this.state.set ? this.returnHeadImg() : null }
+
+                { this.state.set ? this.returnMainContent() : null }
 
             </section>
         )

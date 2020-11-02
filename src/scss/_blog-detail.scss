@@ -2,7 +2,7 @@
     
     &__head {
         background-color: $second-color;
-        padding: 1rem 5rem 4rem 5rem;
+        padding: 1rem 10rem 4rem 10rem;
 
         &-title {
             color: $white-color;
@@ -21,6 +21,28 @@
             background-color: $third-color;
             color: $white-color;
             font-size: 1rem;
+        }
+    }
+
+    &__main-image {
+
+        & > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__main-content {
+        display: grid;
+        grid-template-columns: 30rem auto;
+        padding: 0 10rem 0 10rem ;
+
+        &-side {
+
+        }
+
+        &-center {
+
         }
     }
 }
