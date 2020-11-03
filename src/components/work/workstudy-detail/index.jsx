@@ -16,8 +16,29 @@ class WorkstudyDetail extends React.Component {
         this.setState({
             ...this.state,
             set: true,
-            card: retrievedWorkstudy
+            workstudy: retrievedWorkstudy
         })
+    }
+
+    returnHeadCard = () => {
+        const workstudy = this.state.workstudy
+
+        function getCategories(categories){
+            return categories.map(category => {
+                return(
+                    <button className='blog-detail__head-btn'>{ category }</button>
+                )
+            })
+        }
+
+        return(
+            <div className='blog-detail__head'>
+                <h1 className='blog-detail__head-title'>{ workstudy.title }</h1>
+                <div className='blog-detail__head-btns'>
+                    { getCategories(workstudy.categories) }
+                </div>
+            </div>
+        )
     }
 
     componentDidMount(){
@@ -27,7 +48,7 @@ class WorkstudyDetail extends React.Component {
     render(){
         return(
             <section className='workstudy-detail'>
-                {/* { this.state.set ? this.returnHeadCard() : <p>Loading...</p>} */}
+                { this.state.set ? this.returnHeadCard() : <p>Loading...</p>}
 
                 {/* { this.state.set ? this.returnHeadImg() : null }
 
