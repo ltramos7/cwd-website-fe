@@ -110,6 +110,28 @@ class WorkstudyDetail extends React.Component {
         )
     }
 
+    returnLastContent = () => {
+        const workstudy = this.state.workstudy
+        const workstudyLastInd = workstudy.content.length - 1
+
+        return (
+            <div className='blog-detail__last-content'>
+                <p></p>
+                <p>{ workstudy.content[workstudyLastInd] }</p>
+            </div>
+        )
+    }
+
+    returnLastImage = () => {
+        const workstudy = this.state.workstudy
+
+        return(
+            <div className='blog-detail__last-image'>
+                <img src={require(`../workstudy-detail/workstudy-data/workstudy-images/${workstudy.closingImage}`)} placeholder='closing-image' />
+            </div>
+        )
+    }
+
     componentDidMount(){
         this.setWorkstudyDetailState(this.props.history.location.pathname.split('/')[2])
     }
@@ -125,9 +147,9 @@ class WorkstudyDetail extends React.Component {
 
                 { this.state.set ? this.returnImages() : null }
 
-                {/* { this.state.set ? this.returnLastContent() : null } */}
+                { this.state.set ? this.returnLastContent() : null }
 
-                {/* { this.state.set ? this.returnLastImage() : null } */}
+                { this.state.set ? this.returnLastImage() : null }
                 
             </section>
         )
