@@ -94,6 +94,22 @@ class WorkstudyDetail extends React.Component {
         )
     }
 
+    returnImages = () => {
+        const workstudy = this.state.workstudy
+
+        let updatedImages = workstudy.images.map(img => {
+            return(
+                <img className='blog-detail__images-img' src={require(`../workstudy-detail/workstudy-data/workstudy-images/${img}`)} placeholder='images' />
+            )
+        })
+
+        return(
+            <div className='blog-detail__images'>
+                { updatedImages }
+            </div>
+        )
+    }
+
     componentDidMount(){
         this.setWorkstudyDetailState(this.props.history.location.pathname.split('/')[2])
     }
@@ -107,7 +123,7 @@ class WorkstudyDetail extends React.Component {
 
                 { this.state.set ? this.returnMainContent() : null }
 
-                {/* { this.state.set ? this.returnImages() : null } */}
+                { this.state.set ? this.returnImages() : null }
 
                 {/* { this.state.set ? this.returnLastContent() : null } */}
 
