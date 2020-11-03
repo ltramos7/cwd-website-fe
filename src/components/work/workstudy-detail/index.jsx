@@ -41,6 +41,59 @@ class WorkstudyDetail extends React.Component {
         )
     }
 
+    returnHeadImg = () => {
+        const workstudy = this.state.workstudy
+
+        return(
+            <div className='blog-detail__main-image'>
+                <img src={require(`../workstudy-detail/workstudy-data/workstudy-images/${workstudy.mainImage}`)} placeholder='main-image' />
+            </div>
+        )
+    }
+
+    returnMainContent = () => {
+        const workstudy = this.state.workstudy
+
+        function getSideBarInfo(team, website, client){
+            let updatedTeam = team.join(', ')
+
+            return(
+                <div className='blog-detail__main-content-side'>
+                    <h1>Client</h1>
+                    <p>{ client }</p>
+                    <h1>Team</h1>
+                    <p>{ updatedTeam }</p>
+                    <h1>Website</h1>
+                    <a href={website} target='_blank'>{ website }</a>
+                </div>
+            )
+        }
+
+        function getMainContent(contentList){
+            let updatedContent = contentList.map(content => {
+                return(
+                    <p>{ content }</p>
+                )
+            })
+
+            updatedContent.pop()
+
+            return(
+                <div className='blog-detail__main-content-center'>
+                    { updatedContent }
+                </div>
+            )
+        }
+
+        return(
+            <div className='blog-detail__main-content'>
+                { getSideBarInfo(workstudy.teamMembers, workstudy.website, workstudy.client) }
+
+                { getMainContent(workstudy.content) }
+            </div>
+        )
+    }
+
     componentDidMount(){
         this.setWorkstudyDetailState(this.props.history.location.pathname.split('/')[2])
     }
@@ -50,15 +103,15 @@ class WorkstudyDetail extends React.Component {
             <section className='workstudy-detail'>
                 { this.state.set ? this.returnHeadCard() : <p>Loading...</p>}
 
-                {/* { this.state.set ? this.returnHeadImg() : null }
+                { this.state.set ? this.returnHeadImg() : null }
 
                 { this.state.set ? this.returnMainContent() : null }
 
-                { this.state.set ? this.returnImages() : null }
+                {/* { this.state.set ? this.returnImages() : null } */}
 
-                { this.state.set ? this.returnLastContent() : null }
+                {/* { this.state.set ? this.returnLastContent() : null } */}
 
-                { this.state.set ? this.returnLastImage() : null } */}
+                {/* { this.state.set ? this.returnLastImage() : null } */}
                 
             </section>
         )
