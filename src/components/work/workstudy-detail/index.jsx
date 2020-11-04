@@ -26,15 +26,15 @@ class WorkstudyDetail extends React.Component {
         function getCategories(categories){
             return categories.map(category => {
                 return(
-                    <button className='blog-detail__head-btn'>{ category }</button>
+                    <button className='workstudy-detail__head-btn'>{ category }</button>
                 )
             })
         }
 
         return(
-            <div className='blog-detail__head'>
-                <h1 className='blog-detail__head-title'>{ workstudy.title }</h1>
-                <div className='blog-detail__head-btns'>
+            <div className='workstudy-detail__head'>
+                <h1 className='workstudy-detail__head-title'>{ workstudy.title }</h1>
+                <div className='workstudy-detail__head-btns'>
                     { getCategories(workstudy.categories) }
                 </div>
             </div>
@@ -45,7 +45,7 @@ class WorkstudyDetail extends React.Component {
         const workstudy = this.state.workstudy
 
         return(
-            <div className='blog-detail__main-image'>
+            <div className='workstudy-detail__main-image'>
                 <img src={require(`../workstudy-detail/workstudy-data/workstudy-images/${workstudy.mainImage}`)} placeholder='main-image' />
             </div>
         )
@@ -58,7 +58,7 @@ class WorkstudyDetail extends React.Component {
             let updatedTeam = team.join(', ')
 
             return(
-                <div className='blog-detail__main-content-side'>
+                <div className='workstudy-detail__main-content-side'>
                     <h1>Client</h1>
                     <p>{ client }</p>
                     <h1>Team</h1>
@@ -79,14 +79,14 @@ class WorkstudyDetail extends React.Component {
             updatedContent.pop()
 
             return(
-                <div className='blog-detail__main-content-center'>
+                <div className='workstudy-detail__main-content-center'>
                     { updatedContent }
                 </div>
             )
         }
 
         return(
-            <div className='blog-detail__main-content'>
+            <div className='workstudy-detail__main-content'>
                 { getSideBarInfo(workstudy.teamMembers, workstudy.website, workstudy.client) }
 
                 { getMainContent(workstudy.content) }
@@ -99,12 +99,12 @@ class WorkstudyDetail extends React.Component {
 
         let updatedImages = workstudy.images.map(img => {
             return(
-                <img className='blog-detail__images-img' src={require(`../workstudy-detail/workstudy-data/workstudy-images/${img}`)} placeholder='images' />
+                <img className='workstudy-detail__images-img' src={require(`../workstudy-detail/workstudy-data/workstudy-images/${img}`)} placeholder='images' />
             )
         })
 
         return(
-            <div className='blog-detail__images'>
+            <div className='workstudy-detail__images'>
                 { updatedImages }
             </div>
         )
@@ -115,7 +115,7 @@ class WorkstudyDetail extends React.Component {
         const workstudyLastInd = workstudy.content.length - 1
 
         return (
-            <div className='blog-detail__last-content'>
+            <div className='workstudy-detail__last-content'>
                 <p></p>
                 <p>{ workstudy.content[workstudyLastInd] }</p>
             </div>
@@ -126,7 +126,7 @@ class WorkstudyDetail extends React.Component {
         const workstudy = this.state.workstudy
 
         return(
-            <div className='blog-detail__last-image'>
+            <div className='workstudy-detail__last-image'>
                 <img src={require(`../workstudy-detail/workstudy-data/workstudy-images/${workstudy.closingImage}`)} placeholder='closing-image' />
             </div>
         )
