@@ -10,7 +10,35 @@ class Blog extends React.Component{
         }
     }
 
+    setBlogDataState = () => {
+        this.setState({
+            ...this.state,
+            set: true,
+            blogData: BlogData
+        })
+    }
 
+    showcaseBlogs = () => {
+        console.log(BlogData)
+
+        return this.state.blogData.map(blog => {
+            return(
+                <div className='work__cards-display-card'>
+                    <img src={require(`./blog-data/blog-images/${blog.mainImage}`)} placeholder='blog-image' />
+                    <p>{ this.filterTags(blog.categories) }</p>
+                    <h1>{ blog.title }</h1>
+                </div>
+            )
+        })
+    }
+
+    filterTags = tags => {
+        return tags.join(', ')
+    }
+
+    componentDidMount(){
+        this.setBlogDataState()
+    }
 
     render(){
         return(

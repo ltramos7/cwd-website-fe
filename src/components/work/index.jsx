@@ -19,8 +19,6 @@ class Work extends React.Component{
     }
 
     showcaseWorkstudies = () => {
-        console.log(this.state.workstudyData)
-        
         return this.state.workstudyData.map(card => {
             return(
                 <div className='work__cards-display-card'>
