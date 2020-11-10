@@ -21,13 +21,17 @@ class Work extends React.Component{
     showcaseWorkstudies = () => {
         return this.state.workstudyData.map(card => {
             return(
-                <div className='work__cards-display-card'>
+                <div onClick={() => this.redirectToWorkstudyDetail(card.id)} className='work__cards-display-card'>
                     <img src={require(`./workstudy-detail/workstudy-data/workstudy-images/${card.mainImage}`)} alt='showcase-placeholder' />
                     <p>{ this.filterTags(card.categories) }</p>
                     <h1>{ card.title }</h1>
                 </div>
             )
         })
+    }
+
+    redirectToWorkstudyDetail = id => {
+        this.props.history.push(`/workstudy/${id}`)
     }
 
     filterTags = tags => {
