@@ -19,17 +19,19 @@ class Blog extends React.Component{
     }
 
     showcaseBlogs = () => {
-        console.log(BlogData)
-
         return this.state.blogData.map(blog => {
             return(
-                <div className='work__cards-display-card'>
+                <div onClick={() => this.redirectToBlogDetail(blog.id)} className='work__cards-display-card'>
                     <img src={require(`./blog-data/blog-images/${blog.mainImage}`)} placeholder='blog-image' />
                     <p>{ this.filterTags(blog.categories) }</p>
                     <h1>{ blog.title }</h1>
                 </div>
             )
         })
+    }
+
+    redirectToBlogDetail = id => {
+        this.props.history.push(`/blog/${id}`)
     }
 
     filterTags = tags => {
