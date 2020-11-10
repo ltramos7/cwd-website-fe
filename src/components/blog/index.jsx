@@ -21,7 +21,7 @@ class Blog extends React.Component{
     showcaseBlogs = () => {
         return this.state.blogData.map(blog => {
             return(
-                <div onClick={() => this.redirectToBlogDetail(blog.id)} className='work__cards-display-card'>
+                <div onClick={() => this.redirectToBlogDetail(blog.id)} className='blog__cards-display-card'>
                     <img src={require(`./blog-data/blog-images/${blog.mainImage}`)} placeholder='blog-image' />
                     <p>{ this.filterTags(blog.categories) }</p>
                     <h1>{ blog.title }</h1>
@@ -44,19 +44,19 @@ class Blog extends React.Component{
 
     render(){
         return(
-            <section className='work'>
-                <div className='work__heading'>
-                    <div className='work__heading-text'>
+            <section className='blog'>
+                <div className='blog__heading'>
+                    <div className='blog__heading-text'>
                         <h1>UX and UI case studies</h1>
                         <p>A few projects that we've poured our hearts into</p>
                     </div>
                     <div>
-                        <img className='work__heading-img' src={require(`./images/minimal-placeholder.jpg`)} alt='placeholder' />
+                        <img className='blog__heading-img' src={require(`./images/minimal-placeholder.jpg`)} alt='placeholder' />
                     </div>
                 </div>
 
                 <div>
-                    <ul className='work__design-topics'>
+                    <ul className='blog__design-topics'>
                         <li>
                             <a>UX/UI Design</a>
                         </li>
@@ -72,7 +72,7 @@ class Blog extends React.Component{
                     </ul>
                 </div>
 
-                <div className='work__cards-display'>
+                <div className='blog__cards-display'>
                     { this.state.set ? this.showcaseBlogs() : <p>Loading...</p> }
                 </div>
             </section>
