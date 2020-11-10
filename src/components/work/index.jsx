@@ -1,50 +1,31 @@
 import React from 'react';
+import { WorkstudyData } from './workstudy-detail/workstudy-data/index.js'
 
 class Work extends React.Component{
     constructor(){
         super()
         this.state = {
-            showcases: [
-                {
-                    title: 'Designing a pharmaceutical e-commerce platform',
-                    tags: ['UI Development', 'Strategy'],
-                    image: './images/minimal-placeholder.jpg'
-                },
-                {
-                    title: 'Designing a pharmaceutical e-commerce platform',
-                    tags: ['UI Development', 'Strategy'],
-                    image: './images/minimal-placeholder.jpg'
-                },
-                {
-                    title: 'Designing a pharmaceutical e-commerce platform',
-                    tags: ['UI Development', 'Strategy'],
-                    image: './images/minimal-placeholder.jpg'
-                },
-                {
-                    title: 'Designing a pharmaceutical e-commerce platform',
-                    tags: ['UI Development', 'Strategy'],
-                    image: './images/minimal-placeholder.jpg'
-                },
-                {
-                    title: 'Designing a pharmaceutical e-commerce platform',
-                    tags: ['UI Development', 'Strategy'],
-                    image: './images/minimal-placeholder.jpg'
-                },
-                {
-                    title: 'Designing a pharmaceutical e-commerce platform',
-                    tags: ['UI Development', 'Strategy'],
-                    image: './images/minimal-placeholder.jpg'
-                }
-            ]
+            set: false,
+            workstudyData: null
         }
     }
 
+    setWorkstudyDataState = () => {
+        this.setState({
+            ...this.state,
+            set: true,
+            workstudyData: WorkstudyData
+        })
+    }
+
     showcaseCards = () => {
-        return this.state.showcases.map(card => {
+        console.log(this.state.workstudyData)
+        
+        return this.state.workstudyData.map(card => {
             return(
                 <div className='work__cards-display-card'>
-                    <img src={require(`./images/minimal-placeholder.jpg`)} alt='showcase-placeholder' />
-                    <p>{ this.filterTags(card.tags) }</p>
+                    <img src={require(`./workstudy-detail/workstudy-data/workstudy-images/${card.mainImage}`)} alt='showcase-placeholder' />
+                    <p>{ this.filterTags(card.categories) }</p>
                     <h1>{ card.title }</h1>
                 </div>
             )
@@ -54,9 +35,10 @@ class Work extends React.Component{
     filterTags = tags => {
         return tags.join(', ')
     }
-    
 
-
+    componentDidMount(){
+        this.setWorkstudyDataState()
+    }
 
     render(){
         return(
@@ -90,7 +72,7 @@ class Work extends React.Component{
                 </div>
 
                 <div className='work__cards-display'>
-                    { this.showcaseCards() }
+                    { this.state.set ? this.showcaseCards() : <p>Loading...</p> }
                 </div>
 
                 
