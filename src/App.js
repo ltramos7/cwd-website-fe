@@ -5,7 +5,7 @@ import './scss/main.scss'
 
 import About from './components/about/index'
 
-import Blog from './components/blog/index'
+import Blog from './components/blog/index.jsx'
 import BlogDetail from './components/blog/blog-detail/index'
 
 import Contact from './components/contact/index'

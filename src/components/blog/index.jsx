@@ -1,49 +1,20 @@
 import React from 'react';
-import { WorkstudyData } from './workstudy-detail/workstudy-data/index.js'
+import { BlogData } from './blog-data/index.jsx'
 
-class Work extends React.Component{
+class Blog extends React.Component{
     constructor(){
         super()
         this.state = {
             set: false,
-            workstudyData: null
+            blogData: null
         }
     }
 
-    setWorkstudyDataState = () => {
-        this.setState({
-            ...this.state,
-            set: true,
-            workstudyData: WorkstudyData
-        })
-    }
 
-    showcaseWorkstudies = () => {
-        console.log(this.state.workstudyData)
-        
-        return this.state.workstudyData.map(card => {
-            return(
-                <div className='work__cards-display-card'>
-                    <img src={require(`./workstudy-detail/workstudy-data/workstudy-images/${card.mainImage}`)} alt='showcase-placeholder' />
-                    <p>{ this.filterTags(card.categories) }</p>
-                    <h1>{ card.title }</h1>
-                </div>
-            )
-        })
-    }
-
-    filterTags = tags => {
-        return tags.join(', ')
-    }
-
-    componentDidMount(){
-        this.setWorkstudyDataState()
-    }
 
     render(){
         return(
             <section className='work'>
-                
                 <div className='work__heading'>
                     <div className='work__heading-text'>
                         <h1>UX and UI case studies</h1>
@@ -72,14 +43,11 @@ class Work extends React.Component{
                 </div>
 
                 <div className='work__cards-display'>
-                    { this.state.set ? this.showcaseWorkstudies() : <p>Loading...</p> }
+                    { this.state.set ? this.showcaseBlogs() : <p>Loading...</p> }
                 </div>
-
-                
             </section>
         )
     }
 }
 
-export default Work;
-
+export default Blog;
