@@ -1,0 +1,43 @@
+.contact {
+
+    &__heading {
+        background-color: $second-color;        
+        color: $white-color;
+        padding: 2rem 0 3rem 13rem;
+
+        & > h1 {
+            font-size: 3rem;
+        }
+
+        & > p {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__form {
+        padding: 2rem 0 2rem 13rem;
+        display: grid;
+
+        &-text {
+            margin-bottom: 2rem;
+            width: 60rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+        }
+
+        &-text-area {
+            margin-bottom: 2rem;
+            width: 60rem;
+            height: 10rem;
+            border-radius: 0.5rem;
+        }
+
+        &-btn {
+            width: 15rem;
+            height: 4rem;
+            border-radius: 2rem;
+            background-color: $footer-button;
+            font-size: 1.1rem;
+        }
+    }
+}
