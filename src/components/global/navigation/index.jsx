@@ -35,7 +35,6 @@ class Navigation extends React.Component{
                         </a>
                     </li>
                 </ul>
-                <hr className='nav-line' />
             </nav>
 
         )

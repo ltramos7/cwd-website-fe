@@ -13,7 +13,7 @@
 
         &-title {
             grid-area: left;
-
+            
             font-size: 2rem;
         }
 
@@ -25,26 +25,16 @@
     }
 
     &__team {
-        display: grid;
-        grid-template: 'left middle right';
-        grid-gap: 3rem;
+        display: flex;
 
-        &-left {
-            grid-area: 'left';
-        }
-        
-        &-middle {
-            grid-area: 'middle';
+        &-card {
+            padding-left: 40%;
 
-            @include medium-transition;
-        }
-
-        &-right {
-            grid-area: 'right';
         }
 
         &-arrow {
             cursor: pointer;
+            padding-left: 25%;
         }
 
         &-title {

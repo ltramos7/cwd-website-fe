@@ -1,0 +1,69 @@
+.work {
+    padding-bottom: 10rem;
+
+    &__heading {
+        background-color: $second-color;
+        display: flex;
+        justify-content: center;
+        padding: 4rem;
+        
+        &-text {
+            color: $white-color;
+            padding-right: 10rem;
+
+            & > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &-img {
+            height: 25vh;
+            width: auto;
+        }
+    }
+
+    &__design-topics {
+        display: flex;
+        justify-content: center;
+
+        & > li {
+            list-style-type: none;
+            padding: 5rem 15rem 0 0;
+
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__cards-display{
+        display: grid;
+        grid-template: 'left right';
+        grid-gap: 8rem;
+        padding-top: 3rem;
+        justify-content: center;
+
+        &-card {
+            border-radius: 1%;
+            box-shadow: 2px 2px 5px 5px $first-color-shadow;
+
+            & > img {
+                height: 45vh;
+                width: auto;
+                border-radius: 1% 1% 0% 0%;
+            }
+
+            & > p {
+                opacity: 70%;
+                padding-top: 2rem;
+                padding-left: 2rem;
+            }
+
+            & > h1 {
+                padding-bottom: 2rem;
+                padding-left: 2rem;
+            }
+        }
+
+    }
+    
+}

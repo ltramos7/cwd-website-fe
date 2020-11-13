@@ -1,40 +1,102 @@
-.top-footer {
-    display: flex;
-    width: 89%;
-    font-family: $logo-font;
+.footer {
+    background-color: $black-color;
 
-    & > li {
-        list-style-type: none;
-        padding-left: 5vw;
+    &__head {
+        display: flex;
+        justify-content: center;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
 
-        & > a {
-            text-decoration: none;
-            color: $secondary-color;
+        &-text {
+            color: $white-color;
+            padding-right: 40rem;
+
+            & > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &-button {
+            height: 4rem;
+            width: 20rem;
+            border-radius: 4rem;
+            font-size: 1.5rem;
+            background-color: $footer-button;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-img {
+            & > img {
+                height: 25vh;
+                width: auto;
+            }    
         }
     }
-}
 
-.footer-logo {
-    font-size: 1.3rem;
-    font-weight: bolder;
-}
+    &__sub {
+        display: flex;
+        padding-bottom: 5rem;
 
-.bottom-footer {
-    display: flex;
-    padding-left: 16vw;
+        &-text {
+            width: 30%;
+            padding-left: 17rem;
 
-    & > li {
-        list-style-type: none;
-        padding-right: 4vw;
+            &-logo {
+                color: $white-color;
+                font-size: 2rem;
+            }
 
-        & > a {
-            text-decoration: underline;
-            color: $secondary-color;
-            opacity: 30%;
+            &-description {
+                color: $white-color;
+                font-size: 1.1rem;
+            }
+
+            &-copyright {
+                color: $white-color;
+                font-size: 1.1rem;
+                padding-top: 4rem;
+            }
+        }
+
+        &-project {
+            padding-left: 4rem;
+
+            &-list {
+                color: $white-color;
+
+                &-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+                
+                & > li {
+                    list-style-type: none;
+                    font-size: 1.1rem;
+                    padding-top: 1rem;
+                }
+            }         
+        }
+
+        &-site-map {
+            padding-left: 12rem;
+
+            &-list {
+                color: $white-color;
+
+                &-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+
+                & > li {
+                    list-style-type: none;
+                    font-size: 1.1rem;
+                    padding-top: 1rem;
+                }
+            }
         }
     }
-}
-
-.footer-line {
-    width: 85%;
 }
