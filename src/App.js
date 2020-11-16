@@ -3,6 +3,8 @@ import {BrowserRouter, Route} from 'react-router-dom'
 
 import './scss/main.scss'
 
+import Home from './components/home/index.jsx'
+
 import About from './components/about/index'
 
 import Blog from './components/blog/index.jsx'
@@ -10,7 +12,6 @@ import BlogDetail from './components/blog/blog-detail/index'
 
 import Contact from './components/contact/index.jsx'
 import Footer from './components/global/footer/index'
-import Home from './components/home/index'
 import Navigation from './components/global/navigation/index.jsx'
 
 import Work from './components/work/index'
