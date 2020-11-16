@@ -1,30 +1,44 @@
 .home {
-    font-family: $paragraph-font;
-
-    &__title {
-        font-size: 2.5rem;
-        padding: 0rem 7rem 0rem 7rem;
-    }
-
-    &__tagline {
-        padding: 0rem 7rem 5rem 7rem;
-    }
-
-    &__wide-image {
-        width: 100%;
-        height: auto;
-    }
-
-    &__intro-title {
-        padding: 5rem 7rem 0rem 7rem;
-    }
-
-    &__intro-body {
-        padding: 0rem 7rem 7rem 7rem;
-    }
-
-    &__intro-button {
+    
+    &__header {
+        display: flex;
+        background: $second-color;
         justify-content: center;
+        padding: 5rem 2rem 5rem 2rem;
+
+        &-text {
+            color: $white-color;
+            width: 50rem;
+            padding-right: 1rem;
+
+            & > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &-btn {
+            &-clear {
+                margin-right: 2rem;
+                border-radius: 4rem;
+                border-width: 4px;
+                background: $second-color;
+                color: $white-color;
+                border-color: $footer-button;
+                height: 3rem;
+                width: 12rem;
+            }
+
+            &-full {
+                background: $footer-button;
+                
+            }
+        }
+
+
+        &-img > img {
+            height: 30vh;
+            width: auto;
+        }
     }
     
 }
