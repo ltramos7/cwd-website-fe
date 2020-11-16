@@ -8,15 +8,17 @@
 
         &-text {
             color: $white-color;
-            width: 50rem;
-            padding-right: 1rem;
+            width: 40rem;
+            padding-right: 10rem;
 
             & > h1 {
                 font-size: 3rem;
             }
         }
 
-        &-btn {
+        &-btns {
+            padding-top: 2rem;
+
             &-clear {
                 margin-right: 2rem;
                 border-radius: 4rem;
@@ -30,7 +32,9 @@
 
             &-full {
                 background: $footer-button;
-                
+                border-radius: 4rem;
+                height: 3rem;
+                width: 12rem;
             }
         }
 
