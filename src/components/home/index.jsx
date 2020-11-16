@@ -17,6 +17,41 @@ class Home extends React.Component{
                         <img src={require(`./images/minimal-placeholder.jpg`)} placeholder='rect fill' />
                     </div> 
                 </div>
+
+                <div className='home__what-we-do'>
+                    <h1>What we do</h1>
+                </div>
+
+                <div className='home__categories'>
+                    <div className='home__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <div className='home__categories-card-text'>
+                            <p className='home__categories-card-title'>Strategy & Organization</p>
+                            <p className='home__categories-card-description'>Lorem ipsum dolor sit amet, consectetur adpiscing elit</p>
+                        </div>
+                    </div>
+                    <div className='home__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <div className='home__categories-card-text'>
+                            <p className='home__categories-card-title'>Strategy & Organization</p>
+                            <p className='home__categories-card-description'>Lorem ipsum dolor sit amet, consectetur adpiscing elit</p>
+                        </div>
+                    </div>
+                    <div className='home__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <div className='home__categories-card-text'>
+                            <p className='home__categories-card-title'>Strategy & Organization</p>
+                            <p className='home__categories-card-description'>Lorem ipsum dolor sit amet, consectetur adpiscing elit</p>
+                        </div>
+                    </div>
+                    <div className='home__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <div className='home__categories-card-text'>
+                            <p className='home__categories-card-title'>Strategy & Organization</p>
+                            <p className='home__categories-card-description'>Lorem ipsum dolor sit amet, consectetur adpiscing elit</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         )
     }

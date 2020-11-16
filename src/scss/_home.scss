@@ -45,4 +45,40 @@
         }
     }
     
+    &__what-we-do {
+        font-size: 2rem;
+        padding: 0 0 2rem 10rem;
+    }
+
+    &__categories {
+        display: grid;
+        grid-template-areas: 'one two three four';
+        justify-content: center;
+        padding: 0 0 0 5rem;
+
+        &-card {
+            padding: 0 10rem 0 0;
+            
+            & > img {
+                height: 10rem;
+                margin-left: 0.8rem;
+                width: auto;
+                border-radius: 10rem;
+            }
+
+            &-text {
+                text-align: center;
+            }
+
+            &-title {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            &-description {
+                width: 12rem;
+                opacity: 0.5;
+            }
+        }
+    }
 }
