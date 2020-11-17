@@ -28,7 +28,15 @@ class Home extends React.Component{
             } else {
                 return(
                     <div key={ind} className='home__workstudies-right'>
-
+                        <div className='home__workstudies-right-img'>
+                            <img src={require(`../work/workstudy-detail/workstudy-data/workstudy-images/${study.mainImage}`)} placeholder='main image' />
+                        </div>
+                        <div className='home__workstudies-right-text'>
+                            <p className='home__workstudies-right-text-categories'>{ this.filterCategories(study.categories) }</p>
+                            <p className='home__workstudies-right-text-title'>{ study.title }</p>
+                            <p className='home__workstudies-right-text-content'>{ this.snipContent(study.content[0]) }</p>
+                            <button>View Case Study -></button>
+                        </div>
                     </div>
                 )
             }

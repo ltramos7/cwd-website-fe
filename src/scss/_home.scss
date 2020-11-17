@@ -104,16 +104,64 @@
                     font-size: 1.1rem;
                     font-weight: bold;
                 }
+
+                &-content {
+                    opacity: 0.8;
+                }
+
+                & > button {
+                    height: 3rem;
+                    width: 15rem;
+                    background: $footer-button;
+                    border-radius: 5rem;
+                }
             }
 
             &-img > img {
                 height: auto;
                 width: 25vw;
+                border-radius: 8px;
             }
         }
 
         &-right {
+            display: grid;
+            grid-template-areas: 'one two';
+            grid-gap: 20rem;
+            justify-content: center;
+            background: $second-color-darker;
+            padding: 5rem 0 5rem 0;
 
+            &-text {
+                width: 25vw;
+                color: $white-color;
+
+                &-categories {
+                    opacity: 0.5;
+                }
+
+                &-title {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+
+                &-content {
+                    opacity: 0.8;
+                }
+
+                & > button {
+                    height: 3rem;
+                    width: 15rem;
+                    background: $footer-button;
+                    border-radius: 5rem;
+                }
+            }
+
+            &-img > img {
+                height: auto;
+                width: 25vw;
+                border-radius: 8px;
+            }
         }
     }
 }
