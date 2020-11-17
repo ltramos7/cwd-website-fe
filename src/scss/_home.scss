@@ -81,4 +81,39 @@
             }
         }
     }
+
+    &__workstudies {
+
+        &-left {
+            display: grid;
+            grid-template-areas: 'one two';
+            grid-gap: 20rem;
+            justify-content: center;
+            background: $second-color;
+            padding: 5rem 0 5rem 0;
+
+            &-text {
+                width: 25vw;
+                color: $white-color;
+
+                &-categories {
+                    opacity: 0.5;
+                }
+
+                &-title {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+
+            &-img > img {
+                height: auto;
+                width: 25vw;
+            }
+        }
+
+        &-right {
+
+        }
+    }
 }
