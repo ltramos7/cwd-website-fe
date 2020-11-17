@@ -1,6 +1,51 @@
 import React from 'react';
+import { WorkstudyData } from '../work/workstudy-detail/workstudy-data/index.js'
 
 class Home extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            workstudyData: WorkstudyData
+        }
+    }
+
+    setWorkstudyCards = () => {
+        return this.state.workstudyData.map((study, ind) => {
+            if (ind % 2 === 0){
+                return(
+                    <div key={ind} className='home__workstudies-left'>
+                        <div className='home__workstudies-left-text'>
+                            <p className='home__workstudies-left-text-categories'>{ this.filterCategories(study.categories) }</p>
+                            <p className='home__workstudies-left-text-title'>{ study.title }</p>
+                            <p className='home__workstudies-left-text-content'>{ this.snipContent(study.content[0]) }</p>
+                            <button>View Case Study -></button>
+                        </div>
+                        <div className='home__workstudies-left-img'>
+                            <img src={require(`../work/workstudy-detail/workstudy-data/workstudy-images/${study.mainImage}`)} placeholder='main image' />
+                        </div>
+                    </div>
+                )
+            } else {
+                return(
+                    <div key={ind} className='home__workstudies-right'>
+
+                    </div>
+                )
+            }
+        })
+    }
+
+    filterCategories = categories => {
+        return categories.join(', ')
+    }
+
+    snipContent = content => {
+        let snipped = content.split(' ')
+        snipped = snipped.splice(0, 30)
+        snipped = snipped.join(' ')
+        return snipped
+    }
+
     render(){
         return(
             <section className='home'>
@@ -51,6 +96,10 @@ class Home extends React.Component{
                             <p className='home__categories-card-description'>Lorem ipsum dolor sit amet, consectetur adpiscing elit</p>
                         </div>
                     </div>
+                </div>
+
+                <div className='home__workstudies'>
+                    { this.setWorkstudyCards() }
                 </div>
             </section>
         )
