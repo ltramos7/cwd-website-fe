@@ -1,201 +1,25 @@
 .about {
     
-    font: $paragraph-font;
-    
-    color: $white-color;
-    width: auto;
-
-    &__main-title {
-
-        background: $second-color;
+    &__header {
         display: flex;
-        width: auto;
-        padding-left: 4rem;
-
-        margin: 0;
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 89.6px;
-    }
-
-    &__intro {
         background: $second-color;
-        padding: 4rem;
-        display: grid;
-        grid-template: 'left left right right right';
-        grid-gap: 2rem;
-        width: flex;
+        justify-content: center;
+        padding: 5rem 2rem 5rem 2rem;
 
-        &-title {
-            
-            grid-area: left;
-            font-size: 2rem;
+        &-text {
+            color: $white-color;
+            width: 40rem;
+            padding-right: 10rem;
+
+            & > h1 {
+                font-size: 2.5rem;
+            }
         }
 
-        &-info {
-            grid-area: right;
-
-            text-align: justify;
+        &-img > img {
+            height: 25vh;
+            width: auto;
         }
+
     }
-
-    &__team {
-        display: flex;
-        padding: 4rem;
-        color: $second-color;
-
-        &-card {
-            padding-left: 40%;
-
-        }
-
-        &-arrow {
-            cursor: pointer;
-            padding-left: 25%;
-        }
-
-        &-title {
-            font-size: 2rem;
-            color: $second-color;
-        }
-
-        &-img {
-            height: 50vh;
-            width: auto;
-        }
-
-        &-member-name {
-            font-weight: bolder;
-            font-size: 1.2rem;
-            margin-bottom: 0rem;
-        }
-
-        &-member-job {
-            opacity: 60%;
-        }
-
-        &-member-phone {
-            opacity: 60%;
-        }
-
-        &-member-email {
-            opacity: 60%;
-        }
-    }
-
-    &__tools {
-        display: grid;
-        grid-template: 'left left right right right';
-        grid-gap: 2rem;
-        color: $second-color;
-        padding: 4rem;
-
-        &-title {
-            grid-area: 'left';
-            font-size: 2rem;
-        }
-
-        &-info {
-            grid-area: 'right';
-            text-align: justify;
-        }
-    }
-
-    &__tools_slides {
-        padding-left: 4rem;
-        padding-top: 2rem;
-        display: grid;
-        grid-template: 'one two three four';
-        grid-gap: 3rem;
-
-        &-one {
-            grid-area: 'one';
-            height: 50vh;
-            width: auto;
-        }
-
-        &-two {
-            grid-area: 'two';
-            height: 50vh;
-            width: auto;
-        }
-
-        &-three {
-            grid-area: 'three';
-            height: 50vh;
-            width: auto;
-        }
-
-        &-four {
-            grid-area: 'four';
-            height: 50vh;
-            width: auto;
-        }
-    }
-
-    &__services {
-        grid-template: 'left left right right right';
-        padding-left: 4rem;
-        padding-bottom: 5rem;
-        color: $second-color;
-        display: grid;
-        grid-gap: 5rem;
-        text-align: justify;
-
-        &-title {
-            color: $second-color;
-            padding-left: 4rem;
-            font-size: 2rem;
-            padding-top: 4rem;
-        }
-    }
-    
-    &__services_slides {
-        padding-left: 4rem;
-        padding-top: 2rem;
-        display: grid;
-        grid-template: 'one two three';
-        grid-gap: 5rem;
-
-        &-one {
-            grid-area: 'one';
-            height: 40vh;
-            width: auto;
-            
-        }
-
-        &-two {
-            grid-area: 'two';
-            height: 40vh;
-            width: auto;
-        }
-
-        &-three {
-            grid-area: 'three';
-            height: 40vh;
-            width: auto;
-        }
-
-        &-four {
-            grid-area: four;
-        }
-
-        &-name {
-            font-weight: bolder;
-            font-size: 1.1rem;
-            margin-bottom: 0;
-        }
-
-        &-description {
-            opacity: 60%;
-        }
-
-        &-read {
-            text-decoration: underline;
-            opacity: 80%;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    }
-
 }
