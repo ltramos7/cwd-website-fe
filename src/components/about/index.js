@@ -21,6 +21,33 @@ class About extends React.Component{
                         <img src={require(`./images/minimal-placeholder.jpg`)} placeholder='placeholder img' />
                     </div>
                 </div>
+
+                <div>
+                    <h1 className='about__we-do'>What we do</h1>
+                </div>
+
+                <div className='about__categories'>
+                    <div className='about__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <h1>Strategy & Organization</h1>
+                        <p>lorem ipsum dolor sit amet, consectur adiscping elit.</p> 
+                    </div>
+                    <div className='about__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <h1>Strategy & Organization</h1>
+                        <p>lorem ipsum dolor sit amet, consectur adiscping elit.</p> 
+                    </div>
+                    <div className='about__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <h1>Strategy & Organization</h1>
+                        <p>lorem ipsum dolor sit amet, consectur adiscping elit.</p> 
+                    </div>
+                    <div className='about__categories-card'>
+                        <img src={require(`./images/square-fill.jpg`)} placeholder='square fill' />
+                        <h1>Strategy & Organization</h1>
+                        <p>lorem ipsum dolor sit amet, consectur adiscping elit.</p> 
+                    </div>
+                </div>
             </section>
         )
     }

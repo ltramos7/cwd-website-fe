@@ -20,6 +20,37 @@
             height: 25vh;
             width: auto;
         }
+    }
 
+    &__we-do {
+        font-size: 2rem;
+        padding: 0 0 0 8rem;
+    }
+
+    &__categories {
+        display: grid;
+        grid-template-areas: 'one two three four';
+        grid-gap: 2rem;
+        padding: 3rem 0 0 12rem;
+
+        &-card {
+            & > img {
+                height: 10rem;
+                width: auto;
+                border-radius: 5rem;
+                margin-left: 1rem;
+            }
+
+            & > h1 {
+                font-size: 1.1rem;
+                font-weight: bolder;
+            }
+
+            & > p {
+                opacity: 0.5;
+                text-align: center;
+                width: 12rem;
+            }
+        }
     }
 }
