@@ -1,19 +1,34 @@
 .about {
-    padding: 2rem 5rem 10rem 5rem;
+    
     font: $paragraph-font;
+    
+    color: $white-color;
+    width: auto;
 
     &__main-title {
-        font-size: 4rem;
+
+        background: $second-color;
+        display: flex;
+        width: auto;
+        padding-left: 4rem;
+
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 89.6px;
     }
 
     &__intro {
+        background: $second-color;
+        padding: 4rem;
         display: grid;
         grid-template: 'left left right right right';
         grid-gap: 2rem;
+        width: flex;
 
         &-title {
-            grid-area: left;
             
+            grid-area: left;
             font-size: 2rem;
         }
 
@@ -26,6 +41,8 @@
 
     &__team {
         display: flex;
+        padding: 4rem;
+        color: $second-color;
 
         &-card {
             padding-left: 40%;
@@ -39,6 +56,7 @@
 
         &-title {
             font-size: 2rem;
+            color: $second-color;
         }
 
         &-img {
@@ -69,6 +87,8 @@
         display: grid;
         grid-template: 'left left right right right';
         grid-gap: 2rem;
+        color: $second-color;
+        padding: 4rem;
 
         &-title {
             grid-area: 'left';
@@ -82,6 +102,7 @@
     }
 
     &__tools_slides {
+        padding-left: 4rem;
         padding-top: 2rem;
         display: grid;
         grid-template: 'one two three four';
@@ -113,26 +134,46 @@
     }
 
     &__services {
+        grid-template: 'left left right right right';
+        padding-left: 4rem;
+        padding-bottom: 5rem;
+        color: $second-color;
         display: grid;
-        grid-template: 'one two three four';
         grid-gap: 5rem;
         text-align: justify;
 
         &-title {
+            color: $second-color;
+            padding-left: 4rem;
             font-size: 2rem;
             padding-top: 4rem;
         }
+    }
+    
+    &__services_slides {
+        padding-left: 4rem;
+        padding-top: 2rem;
+        display: grid;
+        grid-template: 'one two three';
+        grid-gap: 5rem;
 
         &-one {
-            grid-area: one;
+            grid-area: 'one';
+            height: 40vh;
+            width: auto;
+            
         }
 
         &-two {
-            grid-area: two;
+            grid-area: 'two';
+            height: 40vh;
+            width: auto;
         }
 
         &-three {
-            grid-area: three;
+            grid-area: 'three';
+            height: 40vh;
+            width: auto;
         }
 
         &-four {
@@ -157,24 +198,4 @@
         }
     }
 
-    &__contact {
-        display: grid;
-        grid-template: 'left left right right right';
-        grid-gap: 5rem;
-        padding-top: 4rem;
-
-        &-us {
-            grid-area: 'left';
-            font-weight: bolder;
-            font-size: 2rem;
-        }
-
-        &-text {
-            grid-area: 'right';
-        }
-
-        // &-list {
-        //     font-size: 3rem;
-        // }
-    }
 }
