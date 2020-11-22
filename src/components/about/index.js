@@ -8,6 +8,25 @@ class About extends React.Component{
         }
     }
 
+    getTeammates = () => {
+        const name = "Joe Dart"
+        const title = "Co-Founder & Lead UX Designer"
+
+        let team = []
+
+        for(let i = 16; i !== 0; i--){
+            team.push(
+                <div className='about__team-mate'>
+                    <img src={require(`./images/square-fill.jpg`)} />
+                    <h1>{name}</h1>
+                    <p>{title}</p>
+                </div>
+            )
+        }
+
+        return team
+    }
+
     render(){
         return(
             <section className='about'>
@@ -47,6 +66,15 @@ class About extends React.Component{
                         <h1>Strategy & Organization</h1>
                         <p>lorem ipsum dolor sit amet, consectur adiscping elit.</p> 
                     </div>
+                </div>
+                
+                <div className='about__our-team'>
+                    <h1>Our Team</h1>
+                    <p>Hailing from the windy city of Chicago, urban scenic NewYork, to the rain-filled coasts of Vancouver, the team at City of Wind works tirelessly to deliver you the best experiences and services.</p>
+                </div>
+
+                <div className='about__team'>
+                    { this.getTeammates() }
                 </div>
             </section>
         )

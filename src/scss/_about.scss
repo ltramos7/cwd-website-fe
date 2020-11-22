@@ -53,4 +53,39 @@
             }
         }
     }
+
+    &__our-team {
+        padding: 5rem 0 6rem 10rem;
+
+        & > h1 {
+            font-size: 3rem;
+        }
+
+        & > p {
+            width: 40vw;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__team {
+        display: grid;
+        grid-template-areas: 'one two three four';
+
+        &-mate {
+            & > img {
+                width: 25vw;
+                height: auto;
+            }
+
+            & > h1 {
+                font-size: 2rem;
+                padding: 0 0 0 2rem;
+            }
+
+            & > p {
+                font-size: 1rem;
+                padding: 0 0 5rem 2rem;
+            }
+        }
+    }
 }
