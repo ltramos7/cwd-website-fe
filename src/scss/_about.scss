@@ -88,4 +88,48 @@
             }
         }
     }
+
+    &__our-tools {
+        padding: 0 0 5rem 10rem;
+
+        & > h1 {
+            font-size: 3rem;
+        }
+
+        & > p {
+            font-size: 1.1rem;
+            width: 40vw;
+        }
+    }
+
+    &__tools {
+        display: grid;
+        grid-template-areas: 'one two';
+        // grid-gap: 20rem;
+        justify-content: center;
+
+        &-card {
+            padding: 0 8rem 5rem 8rem;
+
+            & > img {
+                width: 30vw;
+                height: auto;
+            }
+
+            & > h1 {
+                font-size: 2rem;
+                margin-bottom: -0.5rem;
+            }
+
+            & > h2 {
+                font-size: 1.3rem;
+                font-weight: 400;
+                padding: 0 0 1rem 0;
+            }
+
+            & > p {
+                font-size: 1.1rem;
+            }
+        }
+    }
 }
