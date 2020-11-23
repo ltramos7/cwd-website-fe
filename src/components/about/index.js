@@ -27,6 +27,46 @@ class About extends React.Component{
         return team
     }
 
+    getToolsAndInspirationCards = () => {
+        const name = 'Joe Dart'
+        const title = 'Co Founder & Designer'
+        const tools = [
+            'Akai MPK Mini',
+            'La Croix',
+            'iPad Pro',
+            'Post Its',
+            'Sprint book',
+            'MacBook',
+            'Airpods',
+            'Markers',
+            'Papermate Flair Pens',
+            'Rhodia Reverse Book'
+        ]
+
+        let team = []
+
+        for(let i = 4; i !== 0; i--){
+            team.push(
+                <div className='about__tools-card'>
+                    <img src={require(`./images/square-fill.jpg`)} />
+                    <h1>{ name }</h1>
+                    <h2>{ title }</h2>
+                    { this.filterThroughTools(tools) }
+                </div>
+            )
+        }
+
+        return team
+    }
+
+    filterThroughTools = tools => {
+        return tools.map((tool, ind) => {
+            return(
+                <p>{ ind + 1 }. { tool }</p>
+            )
+        })
+    }
+
     render(){
         return(
             <section className='about'>
@@ -75,6 +115,15 @@ class About extends React.Component{
 
                 <div className='about__team'>
                     { this.getTeammates() }
+                </div>
+
+                <div className='about__our-tools'>
+                    <h1>Our Tools & Inspiration</h1>
+                    <p>Our borderless team brings diverse lenses in our collaborative work. Here are some tools and inspiration we rely on while working remotely to get a better sense of who we are.</p>
+                </div>
+
+                <div className='about__tools'>
+                    { this.getToolsAndInspirationCards() }
                 </div>
             </section>
         )
