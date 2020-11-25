@@ -1,13 +1,19 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 
 class Footer extends React.Component{
+
+    viewContactUs = () => {
+        window.location.href = 'http://localhost:3000/contact'
+    }
+
     render(){
         return(
             <footer className='footer'>
                 <div className='footer__head'>
                     <div className='footer__head-text'>
                         <h1>Have a Project Need?</h1>
-                        <button className='footer__head-button'>Let's work together -></button>
+                        <button onClick={this.viewContactUs} className='footer__head-button'>Let's work together -></button>
                     </div>
                     <div className='footer__head-img'>
                         <img src={require(`./images/minimal-placeholder.jpg`)} alt='placeholder-image' />

@@ -1,6 +1,5 @@
 import React from 'react';
 import { WorkstudyData } from '../work/workstudy-detail/workstudy-data/index.js'
-// text comment to push and update the master branch to then fix heroku
 
 class Home extends React.Component{
     constructor(){
@@ -14,12 +13,12 @@ class Home extends React.Component{
         return this.state.workstudyData.map((study, ind) => {
             if (ind % 2 === 0){
                 return(
-                    <div key={ind} className='home__workstudies-left'>
+                    <div key={study.id} className='home__workstudies-left'>
                         <div className='home__workstudies-left-text'>
                             <p className='home__workstudies-left-text-categories'>{ this.filterCategories(study.categories) }</p>
                             <p className='home__workstudies-left-text-title'>{ study.title }</p>
                             <p className='home__workstudies-left-text-content'>{ this.snipContent(study.content[0]) }</p>
-                            <button>View Case Study -></button>
+                            <button onClick={ () => this.viewCaseStudy(study.id) }>View Case Study -></button>
                         </div>
                         <div className='home__workstudies-left-img'>
                             <img src={require(`../work/workstudy-detail/workstudy-data/workstudy-images/${study.mainImage}`)} placeholder='main image' />
@@ -28,7 +27,7 @@ class Home extends React.Component{
                 )
             } else {
                 return(
-                    <div key={ind} className='home__workstudies-right'>
+                    <div key={study.id} className='home__workstudies-right'>
                         <div className='home__workstudies-right-img'>
                             <img src={require(`../work/workstudy-detail/workstudy-data/workstudy-images/${study.mainImage}`)} placeholder='main image' />
                         </div>
@@ -36,7 +35,7 @@ class Home extends React.Component{
                             <p className='home__workstudies-right-text-categories'>{ this.filterCategories(study.categories) }</p>
                             <p className='home__workstudies-right-text-title'>{ study.title }</p>
                             <p className='home__workstudies-right-text-content'>{ this.snipContent(study.content[0]) }</p>
-                            <button>View Case Study -></button>
+                            <button onClick={ () => this.viewCaseStudy(study.id) }>View Case Study -></button>
                         </div>
                     </div>
                 )
@@ -55,6 +54,14 @@ class Home extends React.Component{
         return snipped
     }
 
+    viewCaseStudy = id => {
+        this.props.history.push(`/workstudy/${id}`)
+    }
+
+    viewContactUs = () => {
+        window.location.href = 'http://localhost:3000/contact'
+    }
+
     render(){
         return(
             <section className='home'>
@@ -63,7 +70,7 @@ class Home extends React.Component{
                         <h1>City of Wind Design</h1>
                         <p>We are a design agency that specializes in baking in human centric design for starups. We prioritize inclusitivy and accessibility in our design practices.</p>
                         <div className='home__header-btns'>
-                            <button className='home__header-btns-clear'>Work with us -></button>
+                            <button onClick={this.viewContactUs} className='home__header-btns-clear'>Work with us -></button>
                             <button className='home__header-btns-full'>Featured Works \/</button>
                         </div>
                     </div>
