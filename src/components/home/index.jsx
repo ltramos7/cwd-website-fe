@@ -9,10 +9,6 @@ class Home extends React.Component{
         }
     }
 
-    fakeMethod = () => {
-        const reason = 'just checking if i solved my contribution error'
-    }
-
     setWorkstudyCards = () => {
         return this.state.workstudyData.map((study, ind) => {
             if (ind % 2 === 0){
