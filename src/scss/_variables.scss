@@ -24,3 +24,9 @@ $white-color: white;
 @mixin fast-transition {
     transition: all 0.15s ease-in-out;
 }
+
+@mixin media-small {
+    @media screen and (max-width: 550px) {
+        @content;
+    }
+}

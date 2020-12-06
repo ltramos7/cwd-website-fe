@@ -1,0 +1,22 @@
+@include media-small {
+    .home {
+        &__header {
+            display: grid;
+            grid-template-areas: 'one';
+            padding: 2rem 2rem 2rem 2rem;
+
+            &-text {
+                width: 100%;
+                padding: 0 0 2rem 0;
+
+                & > h1 {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        &__categories {
+            grid-template-areas: 'one';
+        }
+    }
+}
