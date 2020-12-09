@@ -3,7 +3,6 @@
         &__header {
             display: grid;
             grid-template-areas: 'one';
-            // padding: 2rem 2rem 2rem 2rem;
 
             &-text {
                 width: 90%;
@@ -19,10 +18,25 @@
                 height: auto;
                 width: 90%;
             }
+
+            &-btns {
+                margin-bottom: -2rem;
+            }
+        }
+
+        &__what-we-do > h1 {
+            font-size: 1.8rem;
+            padding: 0 0 0 0;
+            margin-left: -7rem;
+            
         }
 
         &__categories {
             grid-template-areas: 'one';
+
+            &-card {
+                padding: 0 0 3rem 0;
+            }
         }
     }
 }
