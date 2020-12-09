@@ -62,9 +62,10 @@ class Home extends React.Component{
         window.location.href = 'http://localhost:3000/contact'
     }
 
-    render(){
-        return(
-            <section className='home'>
+    checkWindowWidthHeader = () => {
+        console.log('window width', window.innerWidth)
+        if (window.innerWidth > 500){
+            return(
                 <div className='home__header'>
                     <div className='home__header-text'>
                         <h1>City of Wind Design</h1>
@@ -78,6 +79,30 @@ class Home extends React.Component{
                         <img src={require(`./images/minimal-placeholder.jpg`)} placeholder='rect fill' />
                     </div> 
                 </div>
+            )
+        } else {
+            return(
+                <div className='home__header'>
+                    <div className='home__header-text'>
+                        <h1>City of Wind Design</h1>
+                        <p>We are a design agency that specializes in baking in human centric design for starups. We prioritize inclusitivy and accessibility in our design practices.</p>
+                    </div>
+                    <div className='home__header-img'>
+                        <img src={require(`./images/minimal-placeholder.jpg`)} placeholder='rect fill' />
+                    </div> 
+                    <div className='home__header-btns'>
+                        <button onClick={this.viewContactUs} className='home__header-btns-clear'>Work with us -></button>
+                        <button className='home__header-btns-full'>Featured Works \/</button>
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    render(){
+        return(
+            <section className='home'>
+                { this.checkWindowWidthHeader()}
 
                 <div className='home__what-we-do'>
                     <h1>What we do</h1>
