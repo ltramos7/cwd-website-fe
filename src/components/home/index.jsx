@@ -64,7 +64,7 @@ class Home extends React.Component{
 
     checkWindowWidthHeader = () => {
         console.log('window width', window.innerWidth)
-        if (window.innerWidth > 500){
+        if (window.innerWidth > 550){
             return(
                 <div className='home__header'>
                     <div className='home__header-text'>
