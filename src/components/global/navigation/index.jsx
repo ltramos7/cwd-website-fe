@@ -1,9 +1,10 @@
 import React from 'react';
 
 class Navigation extends React.Component{
-    render(){
-        return(
-            <nav>
+
+    checkWindowWidthNav = () => {
+        if (window.innerWidth > 550){
+            return(
                 <ul className='main-nav'>
                     <li>
                         <a className='logo' href='/'>
@@ -35,6 +36,18 @@ class Navigation extends React.Component{
                         </a>
                     </li>
                 </ul>
+            )
+        } else {
+            return(
+                <div>NOTHING</div>
+            )
+        }
+    }
+
+    render(){
+        return(
+            <nav>
+                { this.checkWindowWidthNav() }
             </nav>
 
         )

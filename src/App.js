@@ -11,7 +11,7 @@ import Blog from './components/blog/index.jsx'
 import BlogDetail from './components/blog/blog-detail/index'
 
 import Contact from './components/contact/index.jsx'
-import Footer from './components/global/footer/index'
+import Footer from './components/global/footer/index.jsx'
 import Navigation from './components/global/navigation/index.jsx'
 
 import Work from './components/work/index'
