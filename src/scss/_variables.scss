@@ -1,8 +1,17 @@
 $paragraph-font: 'Avenir';
 $logo-font: 'Playfair Display SC';
 
-$primary-color: #e5e5e5;
-$secondary-color: black;
+$first-color: #e5e5e5;
+$first-color-shadow: #adadad;
+$second-color: #333333;
+$second-color-darker: #1D1D1B;
+
+$third-color: #828282;
+
+$footer-button: #FFB524;
+
+$black-color: black;
+$white-color: white;
 
 @mixin slow-transition {
     transition: all 1s ease-in-out
@@ -14,4 +23,10 @@ $secondary-color: black;
 
 @mixin fast-transition {
     transition: all 0.15s ease-in-out;
+}
+
+@mixin media-small {
+    @media screen and (max-width: 550px) {
+        @content;
+    }
 }

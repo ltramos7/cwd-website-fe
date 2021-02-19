@@ -1,190 +1,135 @@
 .about {
-    padding: 2rem 5rem 10rem 5rem;
-    font: $paragraph-font;
+    
+    &__header {
+        display: flex;
+        background: $second-color;
+        justify-content: center;
+        padding: 5rem 2rem 5rem 2rem;
 
-    &__main-title {
-        font-size: 4rem;
-    }
+        &-text {
+            color: $white-color;
+            width: 40rem;
+            padding-right: 10rem;
 
-    &__intro {
-        display: grid;
-        grid-template: 'left left right right right';
-        grid-gap: 2rem;
-
-        &-title {
-            grid-area: left;
-
-            font-size: 2rem;
+            & > h1 {
+                font-size: 2.5rem;
+            }
         }
 
-        &-info {
-            grid-area: right;
+        &-img > img {
+            height: 25vh;
+            width: auto;
+        }
+    }
 
-            text-align: justify;
+    &__we-do {
+        font-size: 2rem;
+        padding: 0 0 0 8rem;
+    }
+
+    &__categories {
+        display: grid;
+        grid-template-areas: 'one two three four';
+        grid-gap: 2rem;
+        padding: 3rem 0 0 12rem;
+
+        &-card {
+            & > img {
+                height: 10rem;
+                width: auto;
+                border-radius: 5rem;
+                margin-left: 1rem;
+            }
+
+            & > h1 {
+                font-size: 1.1rem;
+                font-weight: bolder;
+            }
+
+            & > p {
+                opacity: 0.5;
+                text-align: center;
+                width: 12rem;
+            }
+        }
+    }
+
+    &__our-team {
+        padding: 5rem 0 6rem 10rem;
+
+        & > h1 {
+            font-size: 3rem;
+        }
+
+        & > p {
+            width: 40vw;
+            font-size: 1.1rem;
         }
     }
 
     &__team {
         display: grid;
-        grid-template: 'left middle right';
-        grid-gap: 3rem;
+        grid-template-areas: 'one two three four';
 
-        &-left {
-            grid-area: 'left';
+        &-mate {
+            & > img {
+                width: 25vw;
+                height: auto;
+            }
+
+            & > h1 {
+                font-size: 2rem;
+                padding: 0 0 0 2rem;
+            }
+
+            & > p {
+                font-size: 1rem;
+                padding: 0 0 5rem 2rem;
+            }
         }
-        
-        &-middle {
-            grid-area: 'middle';
+    }
 
-            @include medium-transition;
-        }
+    &__our-tools {
+        padding: 0 0 5rem 10rem;
 
-        &-right {
-            grid-area: 'right';
-        }
-
-        &-arrow {
-            cursor: pointer;
-        }
-
-        &-title {
-            font-size: 2rem;
-        }
-
-        &-img {
-            height: 50vh;
-            width: auto;
+        & > h1 {
+            font-size: 3rem;
         }
 
-        &-member-name {
-            font-weight: bolder;
-            font-size: 1.2rem;
-            margin-bottom: 0rem;
-        }
-
-        &-member-job {
-            opacity: 60%;
-        }
-
-        &-member-phone {
-            opacity: 60%;
-        }
-
-        &-member-email {
-            opacity: 60%;
+        & > p {
+            font-size: 1.1rem;
+            width: 40vw;
         }
     }
 
     &__tools {
         display: grid;
-        grid-template: 'left left right right right';
-        grid-gap: 2rem;
+        grid-template-areas: 'one two';
+        // grid-gap: 20rem;
+        justify-content: center;
 
-        &-title {
-            grid-area: 'left';
-            font-size: 2rem;
+        &-card {
+            padding: 0 8rem 5rem 8rem;
+
+            & > img {
+                width: 30vw;
+                height: auto;
+            }
+
+            & > h1 {
+                font-size: 2rem;
+                margin-bottom: -0.5rem;
+            }
+
+            & > h2 {
+                font-size: 1.3rem;
+                font-weight: 400;
+                padding: 0 0 1rem 0;
+            }
+
+            & > p {
+                font-size: 1.1rem;
+            }
         }
-
-        &-info {
-            grid-area: 'right';
-            text-align: justify;
-        }
-    }
-
-    &__tools_slides {
-        padding-top: 2rem;
-        display: grid;
-        grid-template: 'one two three four';
-        grid-gap: 3rem;
-
-        &-one {
-            grid-area: 'one';
-            height: 50vh;
-            width: auto;
-        }
-
-        &-two {
-            grid-area: 'two';
-            height: 50vh;
-            width: auto;
-        }
-
-        &-three {
-            grid-area: 'three';
-            height: 50vh;
-            width: auto;
-        }
-
-        &-four {
-            grid-area: 'four';
-            height: 50vh;
-            width: auto;
-        }
-    }
-
-    &__services {
-        display: grid;
-        grid-template: 'one two three four';
-        grid-gap: 5rem;
-        text-align: justify;
-
-        &-title {
-            font-size: 2rem;
-            padding-top: 4rem;
-        }
-
-        &-one {
-            grid-area: one;
-        }
-
-        &-two {
-            grid-area: two;
-        }
-
-        &-three {
-            grid-area: three;
-        }
-
-        &-four {
-            grid-area: four;
-        }
-
-        &-name {
-            font-weight: bolder;
-            font-size: 1.1rem;
-            margin-bottom: 0;
-        }
-
-        &-description {
-            opacity: 60%;
-        }
-
-        &-read {
-            text-decoration: underline;
-            opacity: 80%;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    }
-
-    &__contact {
-        display: grid;
-        grid-template: 'left left right right right';
-        grid-gap: 5rem;
-        padding-top: 4rem;
-
-        &-us {
-            grid-area: 'left';
-            font-weight: bolder;
-            font-size: 2rem;
-        }
-
-        &-text {
-            grid-area: 'right';
-        }
-
-        // &-list {
-        //     font-size: 3rem;
-        // }
     }
 }
