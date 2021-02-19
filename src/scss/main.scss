@@ -1,16 +1,20 @@
 @import './variables';
-@import './about';
-@import './blog';
-@import './contact';
-@import './footer';
-@import './home';
 @import './navigation';
+@import './footer';
+
+@import './home';
+@import './about';
+
 @import './work';
+@import './workstudy-detail';
 
-@import './test';
+@import './contact';
 
+@import './blog';
+@import './blog-detail';
 
+@import './responsive/responsive-main';
 
 body{
-    background-color: $primary-color;
+    background-color: $white-color;
 }

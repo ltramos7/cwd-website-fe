@@ -1,3 +1,167 @@
 .home {
-    font-family: $logo-font;
+    
+    &__header {
+        display: flex;
+        background: $second-color;
+        justify-content: center;
+        padding: 5rem 2rem 5rem 2rem;
+
+        &-text {
+            color: $white-color;
+            width: 40rem;
+            padding-right: 10rem;
+
+            & > h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &-btns {
+            padding-top: 2rem;
+
+            &-clear {
+                margin-right: 2rem;
+                border-radius: 4rem;
+                border-width: 4px;
+                background: $second-color;
+                color: $white-color;
+                border-color: $footer-button;
+                height: 3rem;
+                width: 12rem;
+            }
+
+            &-full {
+                background: $footer-button;
+                border-radius: 4rem;
+                height: 3rem;
+                width: 12rem;
+            }
+        }
+
+
+        &-img > img {
+            height: 30vh;
+            width: auto;
+        }
+    }
+    
+    &__what-we-do {
+        font-size: 2rem;
+        padding: 0 0 2rem 10rem;
+    }
+
+    &__categories {
+        display: grid;
+        grid-template-areas: 'one two three four';
+        justify-content: center;
+        padding: 0 0 0 5rem;
+
+        &-card {
+            padding: 0 10rem 0 0;
+            
+            & > img {
+                height: 10rem;
+                margin-left: 0.8rem;
+                width: auto;
+                border-radius: 10rem;
+            }
+
+            &-text {
+                text-align: center;
+            }
+
+            &-title {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+
+            &-description {
+                width: 12rem;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__workstudies {
+
+        &-left {
+            display: grid;
+            grid-template-areas: 'one two';
+            grid-gap: 20rem;
+            justify-content: center;
+            background: $second-color;
+            padding: 5rem 0 5rem 0;
+
+            &-text {
+                width: 25vw;
+                color: $white-color;
+
+                &-categories {
+                    opacity: 0.5;
+                }
+
+                &-title {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+
+                &-content {
+                    opacity: 0.8;
+                }
+
+                & > button {
+                    height: 3rem;
+                    width: 15rem;
+                    background: $footer-button;
+                    border-radius: 5rem;
+                }
+            }
+
+            &-img > img {
+                height: auto;
+                width: 25vw;
+                border-radius: 8px;
+            }
+        }
+
+        &-right {
+            display: grid;
+            grid-template-areas: 'one two';
+            grid-gap: 20rem;
+            justify-content: center;
+            background: $second-color-darker;
+            padding: 5rem 0 5rem 0;
+
+            &-text {
+                width: 25vw;
+                color: $white-color;
+
+                &-categories {
+                    opacity: 0.5;
+                }
+
+                &-title {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+
+                &-content {
+                    opacity: 0.8;
+                }
+
+                & > button {
+                    height: 3rem;
+                    width: 15rem;
+                    background: $footer-button;
+                    border-radius: 5rem;
+                }
+            }
+
+            &-img > img {
+                height: auto;
+                width: 25vw;
+                border-radius: 8px;
+            }
+        }
+    }
 }
